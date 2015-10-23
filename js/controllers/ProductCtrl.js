@@ -2,6 +2,7 @@ app.controller('ProductCtrl',ProductCtrl);
 
 function ProductCtrl(productService){
 	this.productService = productService;
+	
 }
 ProductCtrl.prototype.addProduct = function(name,description,price,category,quantity,status){
 	//create the api request that makes the product on the backend

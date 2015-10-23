@@ -22,9 +22,10 @@ app.config(function($stateProvider,$httpProvider,$urlRouterProvider){
 		templateUrl:'templates/admin.html',
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
-			path:function($location){
+			path:function($state){
 					if(localStorage.getItem('authToken') == null){
-						$location.path('/login');
+						console.log(localStorage.getItem('authToken'));
+						$state.go('login');
 					}
 				},
 			products:function(productService){
