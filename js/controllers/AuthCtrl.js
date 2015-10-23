@@ -1,8 +1,8 @@
 app.controller('AuthCtrl',AuthCtrl);
 
-function AuthCtrl(api,$location){
+function AuthCtrl(api,$state){
 	this.api = api;
-	this.$location = $location;
+	this.$state = $state;
 }
 AuthCtrl.prototype.authenticate = function(username,password){
 	var self = this;
@@ -18,7 +18,7 @@ AuthCtrl.prototype.authenticate = function(username,password){
       	//reset local storage data
       	localStorage.removeItem('products');
       	localStorage.setItem('authToken',response.data.authToken);
-      	self.$location.path('/admin');
+      	self.$state.go('admin');
       }
     });;
 }

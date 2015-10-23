@@ -22,15 +22,18 @@ app.config(function($stateProvider,$httpProvider,$urlRouterProvider){
 		templateUrl:'templates/admin.html',
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
-			path:function($state){
-					if(localStorage.getItem('authToken') == null){
-						console.log(localStorage.getItem('authToken'));
-						$state.go('login');
-					}
-				},
+			// path:function($state){
+			// 		if(localStorage.getItem('authToken') == null){
+			// 			console.log(localStorage.getItem('authToken'));
+			// 			$state.go('login');
+			// 		}
+			// 	},
 			products:function(productService){
 					return productService.getProducts();
-				}
+				},
+			// orders:function(productService){
+			// 		return productService.getOrders();
+			// 	}
 			}
 	})
 	.state('add_product',{
@@ -40,15 +43,15 @@ app.config(function($stateProvider,$httpProvider,$urlRouterProvider){
 	});
 	
 
-	$httpProvider.interceptors.push(function() {
-    return {
-      'request': function(config) {
-        config.headers = config.headers || {};
-        if (localStorage.authToken) {
-          config.headers.Authorization = localStorage.authToken;
-        }
-        return config;
-      }
-    };
-  });
+	// $httpProvider.interceptors.push(function() {
+ //    return {
+ //      'request': function(config) {
+ //        config.headers = config.headers || {};
+ //        if (localStorage.authToken) {
+ //          config.headers.Authorization = localStorage.authToken;
+ //        }
+ //        return config;
+ //      }
+ //    };
+  // });
 });
