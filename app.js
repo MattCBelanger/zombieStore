@@ -1,15 +1,24 @@
-var app = angular.module('ShopApp',['ngRoute']);
+var app = angular.module('ShopApp',['ui.router']);
 
-app.config(function($routeProvider,$httpProvider){
-	$routeProvider.when('/',{
-		templateUrl:'templates/home.html',
-		controller:'MainCtrl as Ctrl',
-	})
-	.when('/login',{
+app.config(function($stateProvider,$httpProvider,$urlRouterProvider){
+	
+
+	$urlRouterProvider.otherwise('/home');
+
+	$stateProvider
+	
+	.state('home', {
+        url: '/home',
+        templateUrl: 'templates/home.html'
+    })
+
+	.state('login',{
+		 url: '/login',
 		templateUrl:'templates/login.html',
 		controller:'AuthCtrl as Ctrl'
 	})
-	.when('/admin',{
+	.state('admin',{
+		url: '/admin',
 		templateUrl:'templates/admin.html',
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
@@ -23,13 +32,12 @@ app.config(function($routeProvider,$httpProvider){
 				}
 			}
 	})
-	.when('/add_product',{
+	.state('add_product',{
+		url: '/add_product',
 		templateUrl:'templates/add_product.html',
 		controller:'ProductCtrl as Ctrl'
-	})
-	.otherwise({
-		redirectTo:'/'
 	});
+	
 
 	$httpProvider.interceptors.push(function() {
     return {
