@@ -21,10 +21,9 @@ ProductCtrl.prototype.addProduct = function(name,description,price,category,quan
 
 }
 
-//This is a comment!
 //Delete products 
 ProductCtrl.prototype.clearProduct = function(product){
-	console.log("test");
+	console.log("This got printed!");
 	var index = this.products.indexOf(product);
 	if (index != - 1) {
 		this.productService.splice(index, 1);
