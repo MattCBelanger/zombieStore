@@ -23,7 +23,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
         }
     })
 
-    .state('login', {
+        .state('login', {
             url: '/login',
             templateUrl: 'templates/login.html',
             controller: 'AuthCtrl as Ctrl'
@@ -45,8 +45,8 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 }
             }
         })
-        .state('admin_order', {
-            url: '/admin_order',
+        .state('admin-order', {
+            url: '/admin-order',
             templateUrl: 'templates/admin-order.html',
             controller: 'OrderCtrl as Ctrl',
             resolve: {

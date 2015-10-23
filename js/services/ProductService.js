@@ -17,7 +17,7 @@ ProductService.prototype.retrieveProducts = function(){
 
 ProductService.prototype.retrieveOrders = function(){
 	var self = this;
-	return this.api.request('/retrieve_orders/team1',{},'POST');
+	return this.api.request('/retrieve_orders/team1',{},'GET');
 }
 
 ProductService.prototype.setProducts = function(products){
