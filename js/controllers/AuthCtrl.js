@@ -19,6 +19,7 @@ AuthCtrl.prototype.authenticate = function(username,password){
       	localStorage.removeItem('products');
       	localStorage.setItem('authToken',response.data.authToken);
       	self.$state.go('admin');
+      
       }
     });;
 }
