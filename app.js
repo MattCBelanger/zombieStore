@@ -12,6 +12,12 @@ app.config(function($stateProvider,$httpProvider,$urlRouterProvider){
         templateUrl: 'templates/home.html'
     })
 
+    .state('shop', {
+        url: '/shop',
+        templateUrl: 'templates/shop.html'
+        controller:'ShopCtrl as Ctrl'
+    })
+
 	.state('login',{
 		 url: '/login',
 		templateUrl:'templates/login.html',
