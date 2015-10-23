@@ -17,6 +17,6 @@ OrderCtrl.prototype.addOrder = function(name,description,price,category,quantity
 		status:status
 	}
 
-	this.productService.addProduct(request_body);
+	this.productService.addOrder(request_body);
 
 }

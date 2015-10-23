@@ -45,6 +45,16 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('admin_order', {
+            url: '/admin_order',
+            templateUrl: 'templates/admin-order.html',
+            controller: 'OrderCtrl as Ctrl',
+            resolve: {
+                orders: function(productService) {
+                    return productService.getOrders();
+                }
+            }
+        })
         .state('add_product', {
             url: '/add_product',
             templateUrl: 'templates/add_product.html',

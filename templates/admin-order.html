@@ -1,0 +1,59 @@
+<h1>
+	Add Order
+</h1>
+<div class="row">
+	<div class="three columns">
+		<form ng-submit="Ctrl.addOrder(ctrl.cart,total,tax,final_total)">
+			<input type="text" ng-model="name" placeholder="name">
+			<textarea ng-model="description" placeholder="description"></textarea>
+			<input type="text" ng-model="price" placeholder="price">
+			<input type="text" ng-model="category" placeholder="category">
+			<input type="text" ng-model="quantity" placeholder="quantity">
+			<select ng-model="status">
+					<option value="" selected>Status</option>
+					<option value="active">Active</option>
+					<option value="inactive">Inactive</option>
+			</select>
+			<button>Add order</button>
+		</form>
+	</div>
+</div>
+
+<h1>
+	Add item to cart
+</h1>
+<div class="row">
+	<div class="three columns">
+		<form ng-submit="Ctrl.addToCart(name,total,tax,final_total)">
+			<input type="text" ng-model="name" placeholder="name">
+			<textarea ng-model="description" placeholder="description"></textarea>
+			<input type="text" ng-model="price" placeholder="price">
+			<input type="text" ng-model="category" placeholder="category">
+			<input type="text" ng-model="quantity" placeholder="quantity">
+			<select ng-model="status">
+					<option value="" selected>Status</option>
+					<option value="active">Active</option>
+					<option value="inactive">Inactive</option>
+			</select>
+			<button>Add Product</button>
+		</form>
+	</div>
+</div>
+
+<h1>
+	items in cart
+</h1>
+<div ng-repeat="product in Ctrl.cart">
+	<strong>{{product.name}}</strong>
+	<p>{{product.description}}</p>
+	<p>{{product.quantity}}</p>
+</div>
+
+<h1>
+	Orders
+</h1>
+<div ng-repeat="product in Ctrl.cart">
+	<strong>{{product.name}}</strong>
+	<p>{{product.description}}</p>
+	<p>{{product.quantity}}</p>
+</div>

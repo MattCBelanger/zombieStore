@@ -17,7 +17,7 @@ ProductService.prototype.retrieveProducts = function(){
 
 ProductService.prototype.retrieveOrders = function(){
 	var self = this;
-	return this.api.request('/retrieve_orders',{},'GET');
+	return this.api.request('/retrieve_orders/team1',{},'POST');
 }
 
 ProductService.prototype.setProducts = function(products){
@@ -27,7 +27,7 @@ ProductService.prototype.setProducts = function(products){
 	this.products = products;
 }
 
-ProductService.prototype.setOrders = function(products){
+ProductService.prototype.setOrders = function(orders){
 	//store the products in local storage so you don't have to make an API
 	//request each time you are on this page.
 	localStorage.setItem('orders',JSON.stringify(orders));
