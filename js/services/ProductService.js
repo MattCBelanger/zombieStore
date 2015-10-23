@@ -11,11 +11,8 @@ function ProductService(api){
 
 ProductService.prototype.retrieveProducts = function(){
 	var self = this;
-<<<<<<< HEAD
-	return this.api.request('/retrieve_products',{},'POST');
-=======
 	return this.api.request('/retrieve_products/team1',{},'POST');
->>>>>>> dev
+
 }
 
 ProductService.prototype.retrieveOrders = function(){

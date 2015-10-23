@@ -33,20 +33,13 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             templateUrl: 'templates/admin.html',
             controller: 'AdminCtrl as Ctrl',
             resolve: {
-<<<<<<< HEAD
-=======
 
->>>>>>> dev
                 // path: function($state) {
                 //     if (localStorage.getItem('authToken') == null) {
                 //         console.log(localStorage.getItem('authToken'));
                 //         $state.go('login');
                 //     }
                 // },
-<<<<<<< HEAD
-=======
-
->>>>>>> dev
                 products: function(productService) {
                     return productService.getProducts();
                 }
@@ -57,11 +50,6 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             templateUrl: 'templates/add_product.html',
             controller: 'ProductCtrl as Ctrl'
         });
-
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
     // $httpProvider.interceptors.push(function() {
     //     return {
     //         'request': function(config) {
@@ -73,9 +61,6 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     //         }
     //     };
     // });
-<<<<<<< HEAD
-});
-=======
+
 });
 
->>>>>>> dev
