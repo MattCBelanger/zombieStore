@@ -20,3 +20,12 @@ ProductCtrl.prototype.addProduct = function(name,description,price,category,quan
 	this.productService.addProduct(request_body);
 
 }
+
+//This is a comment!
+//Delete products 
+// ProductCtrl.prototype.clearProducts = function(product){
+// 	var index = this.products.indexOf(product);
+// 	if (index != - 1) {
+// 		this.productService.splice(index, 1);
+// 	}
+// }
