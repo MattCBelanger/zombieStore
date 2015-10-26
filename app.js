@@ -23,6 +23,17 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
         }
     })
 
+    .state('product', {
+        url: '/product',
+        templateUrl: 'templates/product.html',
+        controller: 'ProductCtrl as Ctrl',
+        // resolve: {
+            // products: function(productService) {
+            //     return productService.getProducts();
+            // }
+        // }
+    })
+
     .state('login', {
             url: '/login',
             templateUrl: 'templates/login.html',

@@ -3,7 +3,7 @@ app.service('productService',ProductService);
 function ProductService(api){
 	//services
 	this.api = api;
-
+	this.productID = "";
 	this.products = localStorage.getItem('products');
 	this.orders = localStorage.getItem('orders');
 }
@@ -84,4 +84,27 @@ ProductService.prototype.addOrder = function(order){
 				//upddate on html pages???
 			});;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ProductService.prototype.setProductID = function(productID){
+	
+	this.productID = productID;
 }

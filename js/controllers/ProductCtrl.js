@@ -2,6 +2,7 @@ app.controller('ProductCtrl',ProductCtrl);
 
 function ProductCtrl(productService){
 	this.productService = productService;
+	this.product = this.productService.productID;
 	
 }
 ProductCtrl.prototype.addProduct = function(name,description,price,category,quantity,status){

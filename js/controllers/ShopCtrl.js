@@ -1,9 +1,10 @@
 app.controller('ShopCtrl', ShopCtrl);
 
-function ShopCtrl(productService,$location,products){
+function ShopCtrl(productService,$state,products){
 	var self = this;
 
 	//services
+	this.$state=$state;
 	this.productService = productService;
 	this.products = products;
 	this.search= productService.getProducts;
@@ -12,4 +13,10 @@ function ShopCtrl(productService,$location,products){
 
 
 
+};
+
+ShopCtrl.prototype.changeID = function(product) {
+	console.log(product);
+	this.productService.setProductID(product);
+	this.$state.go('product');
 };

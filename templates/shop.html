@@ -48,10 +48,12 @@
 
 
 
-<div ng-repeat="product in Ctrl.products">
+<div ng-repeat="product in Ctrl.products" ng-click="Ctrl.changeID(product)">
 	<strong>{{product.name}}</strong>
 	<p>{{product.description}}</p>
+  <p>{{product.price}}</p>
 	<p>{{product.quantity}}</p>
+  <!-- <button ng-click="Ctrl.changeID(product)">go to details</button> -->
 </div>
 
 
