@@ -3,7 +3,7 @@ app.service('productService',ProductService);
 function ProductService(api){
 	//services
 	this.api = api;
-
+	this.cart = [];
 	this.products = localStorage.getItem('products');
 	this.orders = localStorage.getItem('orders');
 }
@@ -12,12 +12,19 @@ function ProductService(api){
 ProductService.prototype.retrieveProducts = function(){
 	var self = this;
 	return this.api.request('/retrieve_products/team1',{},'POST');
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
 }
 
 ProductService.prototype.retrieveOrders = function(){
 	var self = this;
+<<<<<<< HEAD
 	return this.api.request('/retrieve_orders/team1',{},'GET');
+=======
+	return this.api.request('/retrieve_orders',{},'GET');
+>>>>>>> dev
 }
 
 ProductService.prototype.setProducts = function(products){
@@ -27,7 +34,11 @@ ProductService.prototype.setProducts = function(products){
 	this.products = products;
 }
 
+<<<<<<< HEAD
 ProductService.prototype.setOrders = function(orders){
+=======
+ProductService.prototype.setOrders = function(products){
+>>>>>>> dev
 	//store the products in local storage so you don't have to make an API
 	//request each time you are on this page.
 	localStorage.setItem('orders',JSON.stringify(orders));
@@ -86,3 +97,16 @@ ProductService.prototype.addOrder = function(order){
 			});;
 
 }
+<<<<<<< HEAD
+
+ProductService.prototype.addToCart = function(item){
+ 	this.cart.push(item);
+
+}
+
+ProductService.prototype.getCart = function(){
+ 	return this.cart;
+
+}
+=======
+>>>>>>> dev

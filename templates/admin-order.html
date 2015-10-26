@@ -1,4 +1,4 @@
-<h1>
+<!-- <h1>
 	Add Order
 </h1>
 <div class="row">
@@ -34,14 +34,14 @@
 	<strong>{{product.name}}</strong>
 	<p>{{product.description}}</p>
 	<p>{{product.quantity}}</p>
-</div>
+</div> -->
 
 <h1>
 	Orders
 </h1>
-<div ng-repeat="product in Ctrl.orders">
-	<strong>{{product.cart}}</strong>
-	<strong>{{product.cart.price}}</strong>
-	<p>{{product.final_total}}</p>
+<div ng-repeat="order in Ctrl.orders">
+	<strong>{{order.cart}}</strong>
+	{{order.price}}
+	{{order.final_total}}
 	
 </div>
