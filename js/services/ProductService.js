@@ -3,7 +3,7 @@ app.service('productService',ProductService);
 function ProductService(api){
 	//services
 	this.api = api;
-
+	this.cart = [];
 	this.products = localStorage.getItem('products');
 	this.orders = localStorage.getItem('orders');
 }
@@ -16,7 +16,7 @@ ProductService.prototype.retrieveProducts = function(){
 
 ProductService.prototype.retrieveOrders = function(){
 	var self = this;
-	return this.api.request('/retrieve_orders',{},'GET');
+	return this.api.request('/retrieve_orders/team1',{},'GET');
 }
 
 ProductService.prototype.setProducts = function(products){
@@ -26,7 +26,8 @@ ProductService.prototype.setProducts = function(products){
 	this.products = products;
 }
 
-ProductService.prototype.setOrders = function(products){
+
+ProductService.prototype.setOrders = function(orders){
 	//store the products in local storage so you don't have to make an API
 	//request each time you are on this page.
 	localStorage.setItem('orders',JSON.stringify(orders));
@@ -83,5 +84,14 @@ ProductService.prototype.addOrder = function(order){
 				console.log(response);
 				//upddate on html pages???
 			});;
+
+}
+ProductService.prototype.addToCart = function(item){
+ 	this.cart.push(item);
+
+}
+
+ProductService.prototype.getCart = function(){
+ 	return this.cart;
 
 }

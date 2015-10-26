@@ -9,7 +9,5 @@ function ShopCtrl(productService,$location,products){
 	this.search= productService.getProducts;
 	console.log(this.products);
 
-
-
-
 };
+
