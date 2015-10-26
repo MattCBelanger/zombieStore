@@ -17,8 +17,9 @@
 
 <div ng-repeat="product in Ctrl.products 
          | filter: Ctrl.search
+
          | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" 
-         >
+         ng-show="(product.status=='active')">
 
     <div ng-click="Ctrl.changeID(product)">
       <strong>{{product.name}}</strong>

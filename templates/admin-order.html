@@ -1,47 +1,9 @@
-<!-- <h1>
-	Add Order
-</h1>
-<div class="row">
-	<div class="three columns">
-		<form ng-submit="Ctrl.addOrder(total,tax,final_total)">
-			<input type="number" ng-model="total" placeholder="total">
-			<input type="number" ng-model="tax" placeholder="tax">
-			<input type="number" ng-model="final_total" placeholder="final total">
-			</select>
-			<button>Add order</button>
-		</form>
-	</div>
-</div>
-
-<h1>
-	Add item to cart
-</h1>
-<div class="row">
-	<div class="three columns">
-		<form ng-submit="Ctrl.addToCart(name,price,quantity)">
-			<input type="text" ng-model="name" placeholder="name">
-			<input type="text" ng-model="price" placeholder="price">
-			<input type="text" ng-model="quantity" placeholder="quantity">
-			<button>Add Product</button>
-		</form>
-	</div>
-</div>
-
-<h1>
-	items in cart
-</h1>
-<div ng-repeat="product in Ctrl.cart">
-	<strong>{{product.name}}</strong>
-	<p>{{product.description}}</p>
-	<p>{{product.quantity}}</p>
-</div> -->
 
 <h1>
 	Orders
 </h1>
 <div ng-repeat="order in Ctrl.orders">
-	<strong>{{order.cart}}</strong>
-	{{order.price}}
-	{{order.final_total}}
+	<strong>{{order.cart.name}}</strong>
+	<p>{{order.final_total}}</p>
 	
 </div>
