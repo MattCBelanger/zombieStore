@@ -1,8 +1,10 @@
 app.controller('CheckCtrl',CheckCtrl);
 
-function CheckCtrl(productService,cart){
+function CheckCtrl(productService){
 	
-	this.cart = productService.cart;
+	this.productService = productService;
+
+	this.cart = this.productService.cart;
 	
 }
 

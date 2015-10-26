@@ -89,7 +89,9 @@ ProductService.prototype.addOrder = function(order){
 }
 
 ProductService.prototype.addToCart = function(item){
+ 	
  	this.cart.push(item);
+ 	console.log(this.cart);
 
 }
 

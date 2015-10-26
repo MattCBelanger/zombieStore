@@ -76,12 +76,12 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     .state('check', {
             url: '/checkout',
             templateUrl: 'templates/checkout.html',
-            controller: 'CheckCtrl as Ctrl',
-              resolve: {
-            cart: function(productService) {
-                return productService.getCart();
-                }
-        }
+            controller: 'CheckCtrl as Ctrl'
+        //       resolve: {
+        //     cart: function(productService) {
+        //         return productService.getCart();
+        //         }
+        // }
     })
     .state('cart', {
             url: '/cart',

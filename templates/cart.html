@@ -1,11 +1,15 @@
-<!-- <h1>
+<h1>
 	items in cart
 </h1>
 <div ng-repeat="product in Ctrl.cart">
 	<strong>{{product.name}}</strong>
-	<p>{{product.description}}</p>
-	<p>{{product.quantity}}</p>
-</div> -->
+	<p>{{product.price}}</p>
+
+	<button ng-click="(product.customerQuantity = product.customerQuantity-1)">-</button>
+	<p>{{product.customerQuantity}}</p>
+	
+	<button ng-click="(product.customerQuantity = product.customerQuantity+1)">+</button>
+</div>
 
 
 <button ui-sref="check">Checkout</button>
