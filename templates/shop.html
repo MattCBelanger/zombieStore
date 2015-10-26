@@ -18,12 +18,16 @@
 <div ng-repeat="product in Ctrl.products 
          | filter: Ctrl.search
          | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" 
-         ng-click="Ctrl.changeID(product)">
+         >
 
+    <div ng-click="Ctrl.changeID(product)">
+      <strong>{{product.name}}</strong>
+      <p>{{product.description}}</p>
+      <p>{{product.quantity}}</p>
+    </div>
+    
+    <button ng-click="Ctrl.addToCart(product)">Add to Cart</button>
 
-    <strong>{{product.name}}</strong>
-    <p>{{product.description}}</p>
-    <p>{{product.quantity}}</p>
 
 </div>
 

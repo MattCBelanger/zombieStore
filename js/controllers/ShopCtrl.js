@@ -29,3 +29,14 @@ ShopCtrl.prototype.changeID = function(product) {
 	this.$state.go('product');
 };
 
+ShopCtrl.prototype.addToCart= function(product){
+	var shopItem = product;
+
+	shopItem.customerQuantity =1;
+	
+	console.log(shopItem.customerQuantity);
+	this.productService.addToCart(shopItem);
+	alert("product added!");
+	
+};
+

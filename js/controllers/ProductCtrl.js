@@ -24,7 +24,7 @@ function ProductCtrl(productService){
 
 
 ProductCtrl.prototype.addToCart= function(product){
-	this.product.customerQuantity = 50;
+	this.product.customerQuantity = 1;
 	console.log(this.product.customerQuantity);
 	this.productService.addToCart(product);
 	alert("product added!");
