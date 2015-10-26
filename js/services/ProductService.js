@@ -4,6 +4,7 @@ function ProductService(api){
 	//services
 	this.api = api;
 	this.cart = [];
+	this.productID = "";
 	this.products = localStorage.getItem('products');
 	this.orders = localStorage.getItem('orders');
 }
@@ -86,6 +87,7 @@ ProductService.prototype.addOrder = function(order){
 			});;
 
 }
+
 ProductService.prototype.addToCart = function(item){
  	this.cart.push(item);
 
@@ -93,5 +95,9 @@ ProductService.prototype.addToCart = function(item){
 
 ProductService.prototype.getCart = function(){
  	return this.cart;
+
+
+ProductService.prototype.setProductID = function(productID){
+	this.productID = productID;
 
 }

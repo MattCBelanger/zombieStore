@@ -1,12 +1,15 @@
 app.controller('ShopCtrl', ShopCtrl);
 
-function ShopCtrl(productService,$location,products){
-    var self = this;
 
-    //services
-    this.productService = productService;
-    this.products = products;
-    console.log(this.products);
+function ShopCtrl(productService,$state,products){
+	var self = this;
+
+	//services
+	this.$state=$state;
+	this.productService = productService;
+	this.products = products;
+	this.search= productService.getProducts;
+	console.log(this.products);
 
 
     this.sortOptions = [
@@ -19,4 +22,11 @@ function ShopCtrl(productService,$location,products){
   this.selectedOption= this.sortOptions[0];
 
 
-}
+};
+
+ShopCtrl.prototype.changeID = function(product) {
+	console.log(product);
+	this.productService.setProductID(product);
+	this.$state.go('product');
+};
+
