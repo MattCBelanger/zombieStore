@@ -10,6 +10,10 @@ function ShopCtrl(productService,$state,products,$uibModal){
 	this.products = products;
 	console.log(this.products);
 	this.$uibModal = $uibModal;
+	//navbar search
+	// this.searchBar = this.productService.searchBar;
+
+	
 
 
     this.sortOptions = [

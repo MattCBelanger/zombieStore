@@ -2,22 +2,22 @@
 <form class="form-inline">
    <div class="form-group">
      <label for="search">Search</label>
-     <input ng-model="Ctrl.search" type="text" class="form-control" id="search">
+     <input ng-model="Ctrl.productService.searchBar" type="text" class="form-control" id="search">
    </div>
 
-   <div class="form-group">
+  
+
+ </form>
+  <div class="form-inline">
      <label for="search">Sort</label>
      
      <!-- TODO #6: show the list of sort options form the controller in this dropdown -->
      <select class="form-control" ng-options="item.label for item in Ctrl.sortOptions" ng-model="Ctrl.selectedOption"></select>
    </div>
 
- </form>
-
-
 
 <div ng-repeat="product in Ctrl.products 
-         | filter: Ctrl.search
+         | filter: Ctrl.productService.searchBar
 
          | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" 
          ng-show="(product.status=='active')">
