@@ -7,6 +7,7 @@ function ProductService(api){
 	this.productID = "";
 	this.products = localStorage.getItem('products');
 	this.orders = localStorage.getItem('orders');
+	this.searchBar = "";
 }
 
 
