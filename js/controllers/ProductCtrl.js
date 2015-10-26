@@ -20,6 +20,7 @@ function ProductCtrl(productService){
 
 // 	this.productService.addProduct(request_body);
 
+
 // }
 
 
@@ -29,4 +30,15 @@ ProductCtrl.prototype.addToCart= function(product){
 	this.productService.addToCart(product);
 	alert("product added!");
 	
+
 }
+
+//Delete products 
+// ProductCtrl.prototype.clearProduct = function(productId){
+// 	console.log("This got printed!");
+// 	var index = this.products.indexOf(product);
+// 	if (index != - 1) {
+// 		this.productService.splice(index, 1);
+// 	}
+// }
+
