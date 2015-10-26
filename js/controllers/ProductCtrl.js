@@ -22,10 +22,10 @@ ProductCtrl.prototype.addProduct = function(name,description,price,category,quan
 }
 
 //Delete products 
-ProductCtrl.prototype.clearProduct = function(product){
-	console.log("This got printed!");
-	var index = this.products.indexOf(product);
-	if (index != - 1) {
-		this.productService.splice(index, 1);
-	}
-}
+// ProductCtrl.prototype.clearProduct = function(productId){
+// 	console.log("This got printed!");
+// 	var index = this.products.indexOf(product);
+// 	if (index != - 1) {
+// 		this.productService.splice(index, 1);
+// 	}
+// }

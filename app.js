@@ -50,12 +50,12 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             url: '/add_product',
             templateUrl: 'templates/add_product.html',
             controller: 'ProductCtrl as Ctrl'
-        })
-        .state('delete_product', {
-            url: '/delete_product',
-            templateUrl: 'templates/delete_product.html',
-            controller: 'ProductCtrl as Ctrl'
         });
+        // .state('delete_product', {
+        //     url: '/delete_product',
+        //     templateUrl: 'templates/delete_product.html',
+        //     controller: 'ProductCtrl as Ctrl'
+        // });
 
     // $httpProvider.interceptors.push(function() {
     //     return {
