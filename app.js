@@ -76,37 +76,9 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             url: '/cart',
             templateUrl: 'templates/cart.html',
             controller: 'CartCtrl as Ctrl'
-    })
-
-    .state('login', {
-            url: '/login',
-            templateUrl: 'templates/login.html',
-            controller: 'AuthCtrl as Ctrl'
-    })
-    .state('admin', {
-            url: '/admin',
-            templateUrl: 'templates/admin.html',
-            controller: 'AdminCtrl as Ctrl',
-            resolve: {
-
-                // path: function($state) {
-                //     if (localStorage.getItem('authToken') == null) {
-                //         console.log(localStorage.getItem('authToken'));
-                //         $state.go('login');
-                //     }
-                // },
-
-                products: function(productService) {
-                    return productService.getProducts();
-                }
-            }
-    })
-    .state('add_product', {
-        url: '/add_product',
-        templateUrl: 'templates/add_product.html',
-        controller: 'ProductCtrl as Ctrl'
     });
 
+  
 
     // $httpProvider.interceptors.push(function() {
     //     return {

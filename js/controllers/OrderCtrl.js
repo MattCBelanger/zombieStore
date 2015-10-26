@@ -39,4 +39,3 @@ function OrderCtrl(productService,orders){
 // 	console.log(this.cart);
 // }
 
->>>>>>> admin_order
