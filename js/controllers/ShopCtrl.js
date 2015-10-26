@@ -1,7 +1,7 @@
 app.controller('ShopCtrl', ShopCtrl);
 
 
-function ShopCtrl(productService,$state,products){
+function ShopCtrl(productService,$state,products,$uibModal){
 	var self = this;
 
 	//services
@@ -9,6 +9,11 @@ function ShopCtrl(productService,$state,products){
 	this.productService = productService;
 	this.products = products;
 	console.log(this.products);
+	this.$uibModal = $uibModal;
+	//navbar search
+	// this.searchBar = this.productService.searchBar;
+
+	
 
 
     this.sortOptions = [
@@ -39,4 +44,15 @@ ShopCtrl.prototype.addToCart= function(product){
 	alert("product added!");
 	
 };
+
+ShopCtrl.prototype.open = function(){
+	  this.$uibModal.open({
+      animation: true,
+      templateUrl: 'templates/cart.html',
+      controller: 'CartCtrl as Ctrl',
+      size: "lg"
+      
+    });
+
+}
 
