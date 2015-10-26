@@ -8,7 +8,6 @@ function ShopCtrl(productService,$state,products){
 	this.$state=$state;
 	this.productService = productService;
 	this.products = products;
-	this.search= productService.getProducts;
 	console.log(this.products);
 
 

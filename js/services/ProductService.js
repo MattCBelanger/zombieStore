@@ -95,7 +95,7 @@ ProductService.prototype.addToCart = function(item){
 
 ProductService.prototype.getCart = function(){
  	return this.cart;
-
+}
 
 ProductService.prototype.setProductID = function(productID){
 	this.productID = productID;
