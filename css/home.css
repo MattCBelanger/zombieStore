@@ -19,9 +19,10 @@ padding-bottom: 150px;
 }
 
 .logospace img {
-	padding: 100px 0;
+	padding: 180px 0;
 	margin: 0 auto;
 }
+
 
 hr {
 	background-color:#EF4836;
@@ -32,11 +33,16 @@ hr {
 	margin-right: 150px;
 }
 
- .video_home, .news_home{
-	margin-top: 50px;
+ .video_home{
+	
 	background-color:#EF4836;
-	margin-left: 140px;
-	height: 200px;
+	padding:20px;
+	height: auto;
+	margin: auto;
+}
+
+.news_home{
+	
 }
 
 .ourteam{
@@ -68,16 +74,7 @@ hr {
 .socialmedia{
 	text-align: center;
 	margin: auto;
-
-.fa{
-	padding:20px;
-	margin: auto;
-}
-
-
-
-	
-
+	color:#EF4836;
 
 }
 
