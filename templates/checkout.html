@@ -7,45 +7,74 @@
        			<h1>
 					1. Shipping
 				</h1>
-				<form>
-					
-					<div class="col-md-6">
-						<input type="text">
-					</div>
+				
+			<form>	
+			<form class="form-inline">
 
-					<div class="col-md-6">
-						<input type="text">
-					</div>
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">First Name</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 
-					<div class="col-md-12">
-						<input type="text">
-					</div>
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Last Name</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 
-					<div class="col-md-12">
-						<input type="text">
-					</div>
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Address</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 
-					<div class="col-md-6">
-						<input type="text">
-					</div>
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Address line 2</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 
-					<div class="col-md-6">
-						<input type="text">
-					</div>
-					<div class="col-md-6">
-						<input type="text">
-					</div>
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">City</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 
-					<div class="col-md-6">
-						<input type="text">
-					</div>
-					
-				</form>
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Province</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Postal Code</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-6">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Telephone</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+	
+			</form>
+			</form>
+				
        		</div>
        	</div>
     </div>
 
-
+    <div class="billing">
     <div class="container">
        	<div class="row">
        		<div class="col-lg-12">
@@ -54,27 +83,45 @@
 				</h1>
 				<form>
 
-					<div class="col-md-12">
-						<input type="text">
-					</div>
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Name on Card</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 
-					<div class="col-md-12">
-						<input type="text">
-					</div>
+				<div class="col-md-12">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Card Number</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 
-					<div class="col-md-4">
-						<input type="text">
-					</div>
-					<div class="col-md-4">
-						<input type="text">
-					</div>
-					<div class="col-md-4">
-						<input type="text">
-					</div>
+				<div class="col-md-4">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Month</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-4">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Year</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
+
+				<div class="col-md-4">
+				  <div class="form-group">
+				    <label for="exampleInputName2">CVC</label>
+				    <input type="text" class="form-control" id="exampleInputName2">
+				  </div>
+				</div>
 					
 				</form>
        		</div>
        	</div>
+    </div>
     </div>
 
 
@@ -84,18 +131,21 @@
 	   			<h1>
 					3. Confirmation
 				</h1>
-				<h2>
+				<p class="inyourcart">
 					In Your Cart
-				</h2>
-				<div ng-repeat="product in Ctrl.cart">
-					<strong>{{product.name}}</strong>
-					<p> Product Price {{product.price}}</p>
-					<p> Quantity to order{{product.customerQuantity}}</p>
-					<p> Product Sub Total {{product.price * product.customerQuantity}}</p>
+				</p>
+				<div class="incart" ng-repeat="product in Ctrl.cart">
+					<h2><strong>{{product.name}}</strong></h2>
+					<h2>Price {{product.price}}</h2>
+					<h2>Quantity X {{product.customerQuantity}}</h2>
+					<!-- <p>Product Sub Total {{product.price * product.customerQuantity}}</p> -->
 				</div>
-				<h4>Sub Total {{Ctrl.total}}</h4>
-				<h4>Tax {{Ctrl.tax}}</h4>
-				<h2>Final Total {{Ctrl.final_total}}</h2>
+
+				<div class="finalamt">
+					<p class="total">Sub Total {{Ctrl.total | currency}}</p>
+					<p class="total">Tax {{Ctrl.tax | currency}}</p>
+					<p class="total final">Final Total {{Ctrl.final_total | currency}}</p>
+				</div>
        		</div>
 
 
@@ -107,19 +157,9 @@
 
 	
        		
-       	
-
-	
-       		
-       	
-
-	
+       
 
 
 
-
-
-
-
-<button ng-click="Ctrl.addOrder()">Order!</button>
-<button ui-sref="shop">I forgot an item</button>
+<button class="order" ng-click="Ctrl.addOrder()">Order!</button>
+<button class="forgot" ui-sref="shop">Shit! I forgot an item!</button>
