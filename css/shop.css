@@ -1,0 +1,20 @@
+.product-style {
+	padding: 5px;
+	border: 2px solid #acacac;
+	text-transform: capitalize;
+	border-radius: 5px;
+}
+.product-style h1, h2, h3 {
+	padding: .1em;
+	line-height: .75em;
+}
+.product-style img {
+	padding: .1em;
+}
+.product-style:active, .product-style:hover {
+	border: 2px solid black;
+}
+.shop-jumbotron .jumbotron {
+	background-image: url(../img/city.jpeg);
+	background-size: cover;
+}
