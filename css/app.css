@@ -45,10 +45,9 @@ button {
 	letter-spacing: 3px;
 	padding: 15px;
 	border-radius: 15px;
-	/* can we make this flat yooo */
 }
-.col-md-10 i {
-	color: #EF4836;
-    display:block;
-    text-align:center
+label {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size: 1.25em;
 }
