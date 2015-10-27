@@ -1,7 +1,8 @@
 app.controller('AuthCtrl',AuthCtrl);
 
-function AuthCtrl(api,$state){
+function AuthCtrl(api,productService,$state){
 	this.api = api;
+  this.productService = productService;
 	this.$state = $state;
 }
 AuthCtrl.prototype.authenticate = function(username,password){
@@ -21,8 +22,8 @@ AuthCtrl.prototype.authenticate = function(username,password){
       	console.log('promise went thru');
       	localStorage.removeItem('products');
       	localStorage.setItem('authToken',response.data.authToken);
-      	
-      	console.log("2");
+      	self.productService.token = response.data.authToken;
+      	console.log(self.productService.token);
       	//self.$state.transitionTo('admin');
       	// self.$state.go('admin', {}, {reload: true});
       	

@@ -2,13 +2,13 @@ app.controller('AdminCtrl',AdminCtrl);
 
 function AdminCtrl(productService,$state,products){
 	var self = this;
-
+	
 	//services
 	this.productService = productService;
 	this.products = products;
 	console.log(this.products);
 	this.$state = $state;
-
+	
 }
 
 
@@ -23,3 +23,4 @@ AdminCtrl.prototype.editProduct = function(ID,product) {
 	// this.productService.editProduct(ID,product);
 	this.$state.go('edit_product');
 };
+

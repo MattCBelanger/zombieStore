@@ -15,6 +15,7 @@ function ProductService(api){
 	this.orders = localStorage.getItem('orders');
 	//global search varibale used in search bar
 	this.searchBar = "";
+	this.token ="";
 }
 
 
