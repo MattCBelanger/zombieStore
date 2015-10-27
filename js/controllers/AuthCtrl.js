@@ -11,16 +11,24 @@ AuthCtrl.prototype.authenticate = function(username,password){
 		password:password
 	};
 
+	this.$state.go('admin');
+ console.log("1");
 	this.api.request('/login',request_body,'POST')
 	.then(function(response) {
       console.log(response);
+        console.log(response.data.authToken);
       if(response.data.authToken != 'Invalid Credentials'){
-      	//reset local storage data
+      	console.log('promise went thru');
       	localStorage.removeItem('products');
       	localStorage.setItem('authToken',response.data.authToken);
-      	self.$state.go('admin');
+      	
+      	console.log("2");
+      	//self.$state.transitionTo('admin');
+      	// self.$state.go('admin', {}, {reload: true});
+      	
 
       
       }
     });;
-}
+  console.log("3");
+};

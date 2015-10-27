@@ -73,7 +73,6 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
         controller: 'ProductCtrl as Ctrl'
       
     })
-
     .state('check', {
             url: '/checkout',
             templateUrl: 'templates/checkout.html',
@@ -88,7 +87,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             url: '/cart',
             templateUrl: 'templates/cart.html',
             controller: 'CartCtrl as Ctrl'
-    });
+    })
 
 
     // $httpProvider.interceptors.push(function() {
@@ -101,7 +100,13 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     //             return config;
     //         }
     //     };
-    // });
-
+    // })
+    
+    .state('edit_product', {
+        url: '/edit_product',
+        templateUrl: 'templates/edit_product.html',
+        controller: 'EditCtrl as Ctrl'
+      
+    });
 });
 

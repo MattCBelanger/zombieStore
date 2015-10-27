@@ -3,10 +3,17 @@ app.service('productService',ProductService);
 function ProductService(api){
 	//services
 	this.api = api;
+	// storing cart across all views
 	this.cart = [];
+	//sotring product being viewed on product view
+	this.productView = "";
+	// passing product ID around for admin edit product
 	this.productID = "";
+	//passing product to be edited in admin edit
+	this.editProd="";
 	this.products = localStorage.getItem('products');
 	this.orders = localStorage.getItem('orders');
+	//global search varibale used in search bar
 	this.searchBar = "";
 }
 
@@ -100,7 +107,15 @@ ProductService.prototype.getCart = function(){
  	return this.cart;
 }
 
-ProductService.prototype.setProductID = function(productID){
-	this.productID = productID;
+ProductService.prototype.setProductView = function(productView){
+	this.productView = productView;
 
+}
+
+ProductService.prototype.EditProduct = function(product){
+ 	
+ 	return this.api.request('/editproduct/'+this.productID,product,'POST')
+ 	.then(function(response){
+				console.log(response);
+			});;
 }

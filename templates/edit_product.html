@@ -1,0 +1,21 @@
+<h1>
+	Edit Product
+</h1>
+<div class="row">
+	<div class="three columns">
+		<form ng-submit="Ctrl.editProduct(name,description,price,img,category,quantity,status)">
+			<input type="text" ng-model="name" placeholder="name">
+			<textarea ng-model="description" placeholder="description"></textarea>
+			<input type="text" ng-model="price" placeholder="price">
+			<input type="text" ng-model="img" placeholder="image link">
+			<input type="text" ng-model="category" placeholder="category">
+			<input type="text" ng-model="quantity" placeholder="quantity">
+			<select ng-model="status">
+					<option value="" selected>Status</option>
+					<option value="active">Active</option>
+					<option value="inactive">Inactive</option>
+			</select>
+			<button>Edit Product</button>
+		</form>
+	</div>
+</div>
