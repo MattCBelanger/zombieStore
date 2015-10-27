@@ -14,22 +14,22 @@ AuthCtrl.prototype.authenticate = function(username,password){
 
 	this.$state.go('admin');
  console.log("1");
-	this.api.request('/login',request_body,'POST')
-	.then(function(response) {
-      console.log(response);
-        console.log(response.data.authToken);
-      if(response.data.authToken != 'Invalid Credentials'){
-      	console.log('promise went thru');
-      	localStorage.removeItem('products');
-      	localStorage.setItem('authToken',response.data.authToken);
-      	self.productService.token = response.data.authToken;
-      	console.log(self.productService.token);
-      	//self.$state.transitionTo('admin');
-      	// self.$state.go('admin', {}, {reload: true});
+	this.api.request('/login',request_body,'POST');
+	// .then(function(response) {
+ //      console.log(response);
+ //        console.log(response.data.authToken);
+ //      if(response.data.authToken != 'Invalid Credentials'){
+ //      	console.log('promise went thru');
+ //      	localStorage.removeItem('products');
+ //      	localStorage.setItem('authToken',response.data.authToken);
+ //      	self.productService.token = response.data.authToken;
+ //      	console.log(self.productService.token);
+ //      	//self.$state.transitionTo('admin');
+ //      	// self.$state.go('admin', {}, {reload: true});
       	
 
       
-      }
-    });;
+ //      }
+ //    });;
   console.log("3");
 };

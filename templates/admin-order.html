@@ -3,7 +3,14 @@
 	Orders
 </h1>
 <div ng-repeat="order in Ctrl.orders">
-	<strong>{{order.cart}}</strong>
-	<p>{{order.final_total}}</p>
+	Cart: Order ID {{order.orderId}}
+	<div ng-repeat="item in order.cart">
+		<br>Item Bought: {{item.name}}<br>
+		Item Price: {{item.price}}<br>
+		Quantity: {{item.quantity}}<br>
+	</div>
+
+	
+	<p>Final Price: {{order.final_total}}</p>
 	
 </div>

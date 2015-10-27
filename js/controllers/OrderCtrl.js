@@ -16,13 +16,16 @@ function OrderCtrl(productService,orders){
 
 
 OrderCtrl.prototype.stringIt = function() {
-	console.log("test");
+	
 	console.log(this.orders[0].cart);
+
 	for(i=0;i<this.orders.length;i++){
-		console.log(i);
+		//console.log(i);
 		
 		this.orders[i].cart = JSON.parse(this.orders[i].cart);
+
 	}
+	console.log(this.orders);
 	
 };
 

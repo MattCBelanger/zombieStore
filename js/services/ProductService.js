@@ -20,11 +20,13 @@ function ProductService(api){
 
 
 ProductService.prototype.retrieveProducts = function(){
+	console.log("retrive products");
 	var self = this;
 	return this.api.request('/retrieve_products/team1',{},'POST');
 }
 
 ProductService.prototype.retrieveOrders = function(){
+
 	var self = this;
 	return this.api.request('/retrieve_orders/team1',{},'GET');
 }
@@ -45,6 +47,7 @@ ProductService.prototype.setOrders = function(orders){
 }
 
 ProductService.prototype.getProducts = function(){
+	console.log("getproducts start");
 	var self = this;
 	//if there are no products stored in localStorage
 	//grab them from the API,store them in localStorage
@@ -56,8 +59,10 @@ ProductService.prototype.getProducts = function(){
 		   });
 	}
 	else{
+		console.log("json");
 		return JSON.parse(self.products);
 	}
+	console.log("getproducts end");
 }
 
 ProductService.prototype.getOrders = function(){

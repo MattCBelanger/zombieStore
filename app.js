@@ -18,6 +18,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
         resolve: {
             products: function(productService) {
                 return productService.getProducts();
+                console.log("resolve");
             }
 
         }
