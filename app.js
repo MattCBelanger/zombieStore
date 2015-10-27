@@ -54,6 +54,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             products: function(productService) {
                 return productService.getProducts();
                 }
+
         }
     })
     .state('admin-order', {
@@ -89,7 +90,6 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             controller: 'CartCtrl as Ctrl'
     });
 
-  
 
     // $httpProvider.interceptors.push(function() {
     //     return {
