@@ -3,20 +3,30 @@ app.service('productService',ProductService);
 function ProductService(api){
 	//services
 	this.api = api;
+	// storing cart across all views
 	this.cart = [];
+	//sotring product being viewed on product view
+	this.productView = "";
+	// passing product ID around for admin edit product
 	this.productID = "";
+	//passing product to be edited in admin edit
+	this.editProd="";
 	this.products = localStorage.getItem('products');
 	this.orders = localStorage.getItem('orders');
+	//global search varibale used in search bar
 	this.searchBar = "";
+	this.token ="";
 }
 
 
 ProductService.prototype.retrieveProducts = function(){
+	console.log("retrive products");
 	var self = this;
 	return this.api.request('/retrieve_products/team1',{},'POST');
 }
 
 ProductService.prototype.retrieveOrders = function(){
+
 	var self = this;
 	return this.api.request('/retrieve_orders/team1',{},'GET');
 }
@@ -37,6 +47,7 @@ ProductService.prototype.setOrders = function(orders){
 }
 
 ProductService.prototype.getProducts = function(){
+	console.log("getproducts start");
 	var self = this;
 	//if there are no products stored in localStorage
 	//grab them from the API,store them in localStorage
@@ -48,8 +59,10 @@ ProductService.prototype.getProducts = function(){
 		   });
 	}
 	else{
+		console.log("json");
 		return JSON.parse(self.products);
 	}
+	console.log("getproducts end");
 }
 
 ProductService.prototype.getOrders = function(){
@@ -100,7 +113,15 @@ ProductService.prototype.getCart = function(){
  	return this.cart;
 }
 
-ProductService.prototype.setProductID = function(productID){
-	this.productID = productID;
+ProductService.prototype.setProductView = function(productView){
+	this.productView = productView;
 
+}
+
+ProductService.prototype.EditProduct = function(product){
+ 	
+ 	return this.api.request('/editproduct/'+this.productID,product,'POST')
+ 	.then(function(response){
+				console.log(response);
+			});;
 }
