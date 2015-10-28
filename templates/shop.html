@@ -1,35 +1,58 @@
-<!-- <button ng-click="Ctrl.open()">Cart</button> -->
-<!-- <form class="form-inline">
-   <div class="form-group">
-     <label for="search">Search</label>
-     <input ng-model="Ctrl.productService.searchBar" type="text" class="form-control" id="search">
-   </div>
 
-  
+<div class="shop-jumbotron">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Equip yourself</h1>
 
- </form> -->
-  <div class="form-inline">
-     <label for="search">Sort</label>
-     
-     <!-- TODO #6: show the list of sort options form the controller in this dropdown -->
-     <select class="form-control" ng-options="item.label for item in Ctrl.sortOptions" ng-model="Ctrl.selectedOption"></select>
-   </div>
-
-
-<div ng-repeat="product in Ctrl.products 
-         | filter: Ctrl.productService.searchBar
-
-         | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" 
-         ng-show="(product.status=='active')">
-
-    <div ng-click="Ctrl.changeID(product)">
-      <strong>{{product.name}}</strong>
-      <p>{{product.description}}</p>
-      <p>{{product.quantity}}</p>
     </div>
-    
-    <button ng-click="Ctrl.addToCart(product)">Add to Cart</button>
-
-
+  </div>
 </div>
 
+<!-- <div class="container"> -->
+  <!-- div class="row">
+    <button ng-click="Ctrl.open()" class="btn btn-default">Cart</button>
+  </div> -->
+  <!-- <div class="row">
+    <form class="form-inline shop-search">
+       <div class="form-group">
+         <label for="search">Search</label>
+         <input ng-model="Ctrl.productService.searchBar" type="text" class="form-control" id="search">
+       </div>
+     </form>
+  </div> -->
+ <!--  <div class="row">
+    <div class="form-inline shop-search">
+       <label for="search">Sort</label>
+       TODO #6: show the list of sort options form the controller in this dropdown
+       <select class="form-control" ng-options="item.label for item in Ctrl.sortOptions" ng-model="Ctrl.selectedOption"></select>
+     </div>
+  </div> -->
+<section> 
+  <div class="container">
+  <div class="product-list-view">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4
+                  product-style 
+                  text-center" 
+                  ng-repeat="product in Ctrl.products 
+               | filter: Ctrl.productService.searchBar
+
+               | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" 
+               ng-show="(product.status=='active')">
+
+          <div ng-click="Ctrl.changeID(product)">
+            <img src="http://www.raymears.com/_rm_pictures_/Gransfors-Outdoor-Axe1.jpg" alt="..." class="img-responsive col-md-12">
+            <span class="text-content"><span>+ Click for more details</span></span>
+            <h2><strong>{{product.name}}</strong></h2>
+            <h3>{{product.description}}</h3>
+            <p>${{product.price}}</p>
+            <p>In stock: {{product.quantity}}</p>
+          </div>
+          
+            <button ng-click="Ctrl.addToCart(product)" class="btn btn-info">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  <hr>
+</section>

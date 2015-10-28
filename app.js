@@ -35,7 +35,9 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             },
         resolve: {
             products: function(productService) {
-                return productService.getProducts();
+                var products = productService.getProducts();
+                console.log(products);
+                return products;
                 console.log("resolve");
             }
 
@@ -80,14 +82,16 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 },
         resolve: {
 
-                // path: function($state) {
-                //     if (localStorage.getItem('authToken') == null) {
-                //         console.log(localStorage.getItem('authToken'));
-                //         $state.go('login');
-                //     }
-                // },
-            products: function(productService) {
-                return productService.getProducts();
+                products: function(productService) {
+                    var products = productService.getProducts();
+                    console.log(products);
+                    if (localStorage.getItem('authToken') == null) {
+                        console.log(localStorage.getItem('authToken'));
+                        console.log("yoyo");
+                        $state.go('login');
+                    }else{
+                    return products;
+                    }
                 }
 
         }
@@ -134,6 +138,9 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     })
     .state('cart', {
             url: '/cart',
+
+            templateUrl: 'templates/cart.html',
+            controller: 'CartCtrl as Ctrl',
             views: {
                 content: {
                   templateUrl: 'templates/cart.html',
@@ -143,17 +150,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     })
 
 
-    // $httpProvider.interceptors.push(function() {
-    //     return {
-    //         'request': function(config) {
-    //             config.headers = config.headers || {};
-    //             if (localStorage.authToken) {
-    //                 config.headers.Authorization = localStorage.authToken;
-    //             }
-    //             return config;
-    //         }
-    //     };
-    // })
+   
       .state('nav', {
             url: '/navbar',
             templateUrl: 'templates/navbar.html',
@@ -173,5 +170,18 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                     }
                 } 
     });
+    //  $httpProvider.interceptors.push(function() {
+    //     return {
+    //         'request': function(config) {
+    //             config.headers = config.headers || {};
+    //             if (localStorage.authToken) {
+    //                 config.headers.Authorization = localStorage.authToken;
+    //             }
+    //             return config;
+    //         }
+    //     };
+    
+     
+
 });
 

@@ -6,13 +6,14 @@ function ProductCtrl(productService,$state){
 	this.$state=$state;
 	
 }
-ProductCtrl.prototype.addProduct = function(name,description,price,category,quantity,status){
+ProductCtrl.prototype.addProduct = function(name,description,price,img,category,quantity,status){
 	
 	var request_body = {
 		name:name,
 		description:description,
 		price:price,
 		category:category,
+		image:img,
 		quantity:quantity,
 		status:status
 	}
