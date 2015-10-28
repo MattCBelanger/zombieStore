@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" ui-sref="home">
-          <img alt="Brand" src="...">
+          <img alt="Brand" src="../img/navbrand1.svg">
       </a>
     </div>
 
@@ -17,10 +17,12 @@
     <ul class="navbar-collapse" ng-class="{collapse: isCollapsed}">
       
       <form class="form-inline nav navbar-nav navbar-right test5">
-          <div class="nav navbar-nav">
+      <a class="fa fa-shopping-cart fa-3x" ng-click="Ctrl.open()"></a>
+          <div class="nav navbar-nav searchPad">
               <label for="search">Search</label>
               <input ng-model="Ctrl.productService.searchBar" type="text" class="form-control" id="search">
               <a class="fa fa-search fa-2x" ui-sref="shop"></a>
+
           </div>
           
           
@@ -35,7 +37,6 @@
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="shop">Shop</a></li>
             <li><a ui-sref="login">Login</a></li>
-            <li><a class="fa fa-shopping-cart fa-3x" ng-click="Ctrl.open()"></a></li>
        </ul>
       </ul>
     </div><!-- /.navbar-collapse -->
