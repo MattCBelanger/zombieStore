@@ -1,23 +1,25 @@
-<div class="ordertitle">
-	<h1>
+
+
+<div class="container">
+	<h1 class="ordertitle">
 		Orders Feed
 	</h1>
-</div>
+	<div class="row col-md-10 col-md-offset-1">
+		<div class="ordertitle" ng-repeat="order in Ctrl.orders">
+			<div class="orderdetails">
 
+			<strong>Order ID: {{order.orderId}}</strong>
 
-	<div ng-repeat="order in Ctrl.orders">
-		<div class="orderdetails">
+				<div class="ordervalues" ng-repeat="item in order.cart">
+					<div>Item Bought: {{item.name}}</div>
+					<div>Item Price: {{item.price}}</div>
+					<div>Quantity Bought: {{item.quantity}}</div>
+				</div>
 
-		<strong>Order ID: {{order.orderId}}</strong>
-
-			<div class="ordervalues" ng-repeat="item in order.cart">
-				<div>Item Bought: {{item.name}}</div>
-				<div>Item Price: {{item.price}}</div>
-				<div>Quantity Bought: {{item.quantity}}</div>
+				<p>Total Paid: {{order.final_total}}</p>
+				<hr>
 			</div>
 
-			<p>Total Paid: {{order.final_total}}</p>
-		
 		</div>
-
 	</div>
+</div>
