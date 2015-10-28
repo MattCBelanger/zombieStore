@@ -1,4 +1,3 @@
-
 <div class="addprodtitle">
 <h1>
 	Add Product
@@ -7,39 +6,46 @@
 
 <div class="row">
 	<div class="addProductAll">
-		<form class="form-inline" ng-submit="Ctrl.addProduct(name,description,price,category,quantity,status)">
+		<form class="form-inline" ng-submit="Ctrl.addProduct(name,description,price,img,category,quantity,status)">
 
 		<div class="col-md-12">
 		  <div class="form-group">
 		    <label for="exampleInputName2">Product Name</label>
-		    <input type="text" class="form-control" id="exampleInputName2" ng-model="name">
+		    <input type="text" class="form-control" ng-model="name">
 		  </div>
 		</div>
 
 		<div class="col-md-12">
 		  <div class="form-group">
 		    <label for="exampleInputEmail2">Description</label>
-		    <textarea type="email" class="form-control" id="exampleInputEmail2" ng-model="description"></textarea>
+		    <textarea type="email" class="form-control" ng-model="description"></textarea>
 		  </div>
 
 		<div class="col-md-12">
 		  <div class="form-group">
 		    <label for="exampleInputName2">Price</label>
-		    <input type="text" class="form-control" id="exampleInputName2" ng-model="price">
+		    <input type="text" class="form-control" ng-model="price">
+		  </div>
+		  </div>
+
+		<div class="col-md-12">
+		  <div class="form-group">
+		    <label for="exampleInputName2">Image URL</label>
+		    <input type="text" class="form-control" ng-model="img">
 		  </div>
 		  </div>
 
 		<div class="col-md-12">
 		  <div class="form-group">
 		    <label for="exampleInputName2">Category</label>
-		    <input type="text" class="form-control" id="exampleInputName2" ng-model="category">
+		    <input type="text" class="form-control" ng-model="category">
 		  </div>
 		  </div>
 
 		<div class="col-md-12">
 		  <div class="form-group">
 		    <label for="exampleInputName2">Quantity</label>
-		    <input type="text" class="form-control" id="exampleInputName2" ng-model="quantity">
+		    <input type="text" class="form-control" ng-model="quantity">
 		  </div>
 		  </div>
 
