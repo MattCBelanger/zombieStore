@@ -37,9 +37,9 @@
                   ng-repeat="product in Ctrl.products 
                | filter: Ctrl.productService.searchBar
 
-               | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" 
-               ng-show="(product.status=='active')">
-
+               | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" ng-show="(product.status=='active')"
+               >
+<!-- ng-show="(product.status=='active')" -->
           <div ng-click="Ctrl.changeID(product)">
             <img src="http://www.raymears.com/_rm_pictures_/Gransfors-Outdoor-Axe1.jpg" alt="..." class="img-responsive col-md-12">
             <span class="text-content"><span>+ Click for more details</span></span>

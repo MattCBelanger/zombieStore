@@ -23,34 +23,6 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
       }  
 
     })
-
-    .state('shop', {
-        url: '/shop',
-         views: {
-                nav: {
-                  templateUrl: 'templates/navbar.html',
-                  controller: 'NavCtrl as Ctrl'
-                },
-                content: {
-                    templateUrl: 'templates/shop.html',
-                     controller: 'ShopCtrl as Ctrl'
-                 },
-
-                foot: {
-                    templateUrl: 'templates/footer.html'
-                }
-            },
-        resolve: {
-            products: function(productService) {
-                var products = productService.getProducts();
-                console.log(products);
-                return products;
-                console.log("resolve");
-            }
-
-        }
-    })
-
     .state('product', {
         url: '/product',
         views: {
@@ -107,6 +79,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
 
        }         }
     })
+
     .state('admin-order', {
         url: '/admin-order',
          views: {
@@ -189,19 +162,45 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                     }
                 } 
     })
-     $httpProvider.interceptors.push(function() {
-        return {
-            'request': function(config) {
-                config.headers = config.headers || {};
-                if (localStorage.authToken) {
-                    config.headers.Authorization = localStorage.authToken;
+       .state('shop', {
+        url: '/shop',
+         views: {
+                nav: {
+                  templateUrl: 'templates/navbar.html',
+                  controller: 'NavCtrl as Ctrl'
+                },
+                content: {
+                    templateUrl: 'templates/shop.html',
+                     controller: 'ShopCtrl as Ctrl'
+                 },
+
+                foot: {
+                    templateUrl: 'templates/footer.html'
                 }
-                return config;
+            },
+        resolve: {
+            products: function(productService) {
+                var products = productService.getProducts();
+                console.log(products);
+                return products;
+                console.log("resolve");
             }
-        };
+
+        }
+    });
+    //  $httpProvider.interceptors.push(function() {
+    //     return {
+    //         'request': function(config) {
+    //             config.headers = config.headers || {};
+    //             if (localStorage.authToken) {
+    //                 config.headers.Authorization = localStorage.authToken;
+    //             }
+    //             return config;
+    //         }
+    //     };
     
      
 
-    });
+    // });
 });
 
