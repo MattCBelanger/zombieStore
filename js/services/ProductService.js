@@ -59,8 +59,15 @@ ProductService.prototype.getProducts = function(){
 		   });
 	}
 	else{
-		console.log("json");
+		
+		console.log(self.products);
+		console.log(typeof self.products);
+		if (typeof self.products == "object"){
+			return self.products;
+		}else{
+			console.log("json");
 		return JSON.parse(self.products);
+		}
 	}
 	console.log("getproducts end");
 }
