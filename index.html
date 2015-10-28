@@ -6,11 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
-
-
 	<link rel="stylesheet" type="text/css" href="css/checkout.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
-
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/shop.css">
 
 
@@ -47,6 +45,9 @@
 	<script type="text/javascript" src="js/controllers/CheckCtrl.js"></script>
 	<script type="text/javascript" src="js/controllers/EditCtrl.js"></script>
 
+	<script type="text/javascript" src="js/controllers/navbarCtrl.js"></script>
+
+
 
 	<!-- Services -->
 	<script type="text/javascript" src="js/services/ApiService.js"></script>
@@ -56,6 +57,12 @@
 	<!-- Directives -->
 </head>
 <body ng-app="ShopApp">
-	<ui-view></ui-view>
+
+	 <div ui-view name="nav"></div>
+
+  
+    <div ui-view name="content"></div>
+  
+	<!-- <ui-view></ui-view> -->
 </body>
 </html>
