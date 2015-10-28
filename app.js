@@ -92,9 +92,9 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                     }else{
                     return products;
                     }
-                }
+                
 
-        }
+       }         }
     })
     .state('admin-order', {
         url: '/admin-order',
