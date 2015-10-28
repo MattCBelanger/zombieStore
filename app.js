@@ -93,7 +93,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 },
         resolve: {
 
-                products: function(productService) {
+                products: function(productService,$state) {
                     var products = productService.getProducts();
                     console.log(products);
                     if (localStorage.getItem('authToken') == null) {
