@@ -38,3 +38,7 @@ a, a:link, a:visited{
 .navbar-inverse {
     background-color: #000;
 }
+
+.navFont{
+	font-family: 'Oswald', sans-serif;
+}
