@@ -53,6 +53,18 @@ CheckCtrl.prototype.calculate = function(){
 }
 
 CheckCtrl.prototype.open = function(){
+	var request_body = {
+		cart:this.cart,
+		total:this.total.toString(),
+		tax:this.tax.toString(),
+		final_total:this.final_total.toString()
+		
+	}
+	console.log(request_body);
+
+	this.productService.addOrder(request_body);
+
+
 	  this.$uibModal.open({
       animation: true,
       templateUrl: 'templates/order_confirmation.html',
