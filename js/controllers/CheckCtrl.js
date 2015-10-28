@@ -1,9 +1,9 @@
 app.controller('CheckCtrl',CheckCtrl);
 
-function CheckCtrl(productService){
+function CheckCtrl(productService,$uibModal){
 	
 	this.productService = productService;
-
+	this.$uibModal=$uibModal;
 	this.cart = this.productService.cart;
 	this.final_total=0;
 	this.total=0;
@@ -41,3 +41,13 @@ CheckCtrl.prototype.calculate = function(){
 
 	this.final_total = this.tax +this.total;
 }
+
+CheckCtrl.prototype.open = function(){
+	  this.$uibModal.open({
+      animation: true,
+      templateUrl: 'templates/order_confirmation.html',
+      controller: 'OrderConfirmCtrl as Ctrl',
+      size: "lg"
+      
+    });
+	}
