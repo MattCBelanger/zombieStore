@@ -1,10 +1,13 @@
-<div class="checkout">
+
+<div class="test">
 	<div class="container">
        	<div class="row">
        		<div class="col-lg-12">
+       			<div class="headerz">
        			<h1>
 					1. Shipping
 				</h1>
+				</div>
 				
 			<form>	
 			<form class="form-inline">
@@ -76,9 +79,11 @@
     <div class="container">
        	<div class="row">
        		<div class="col-lg-12">
+       			<div class="headerz">
 		       	<h1>
 					2. Billing
 				</h1>
+				</div>
 				<form>
 
 				<div class="col-md-12">
@@ -126,17 +131,25 @@
 	<div class="container">
        	<div class="row">
        		<div class="col-lg-12">
+       			<div class="headerz">
 	   			<h1>
 					3. Confirmation
 				</h1>
+				</div>
 				<p class="inyourcart">
 					In Your Cart
 				</p>
 				<div class="incart" ng-repeat="product in Ctrl.cart">
+					<div class="smallhead">
 					<h2><strong>{{product.name}}</strong></h2>
+					</div>
+					<div class="smallhead">
 					<h2>Price {{product.price}}</h2>
+					</div>
+					<div class="smallhead">
 					<h2>Quantity X {{product.customerQuantity}}</h2>
-					<!-- <p>Product Sub Total {{product.price * product.customerQuantity}}</p> -->
+					</div>
+					
 				</div>
 
 				<div class="finalamt">
@@ -149,9 +162,9 @@
 
        	</div>
     </div>
+</div>
 
 
-	
 
 	
        		

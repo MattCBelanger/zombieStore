@@ -1,16 +1,17 @@
-.checkout .container {
+.test .container {
 	padding: 50px 300px 80px 300px;
 }
 .checkout .billing {
 	background-color: #F7F7F7;
 }
 
-.checkout h1 {
+.headerz h1 {
 	text-align: center;
 	margin-bottom: 50px;
 }
 
-.checkout h2 {
+
+.smallhead h2 {
 	font-size:1em;
 }
 
