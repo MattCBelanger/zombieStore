@@ -2,8 +2,8 @@ app.controller('AuthCtrl',AuthCtrl);
 
 function AuthCtrl(api,productService,$state){
 	this.api = api;
-  	this.productService = productService;
-	this.$state = $state;
+  this.productService = productService;
+
 }
 AuthCtrl.prototype.authenticate = function(username,password){
 	var self = this;
@@ -11,7 +11,6 @@ AuthCtrl.prototype.authenticate = function(username,password){
 		username:username,
 		password:password
 	};
-
 
 	this.api.request('/login',request_body,'POST')
 	.then(function(response) {

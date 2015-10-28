@@ -138,6 +138,9 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     })
     .state('cart', {
             url: '/cart',
+
+            templateUrl: 'templates/cart.html',
+            controller: 'CartCtrl as Ctrl'
             views: {
                 content: {
                   templateUrl: 'templates/cart.html',
@@ -177,6 +180,8 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     //             return config;
     //         }
     //     };
-    // });
+    
+     
+
 });
 

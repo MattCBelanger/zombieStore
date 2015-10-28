@@ -59,7 +59,6 @@ ProductService.prototype.getProducts = function(){
 		   });
 	}
 	else{
-		
 		console.log(self.products);
 		console.log(typeof self.products);
 		if (typeof self.products == "object"){
