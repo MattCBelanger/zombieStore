@@ -6,11 +6,11 @@
 	    margin-top: 15px;
 	    font-size: 1.2em;
 }
-.form-group{
+.navbar .form-group{
 	padding-bottom: 0;
 }
 
-.form-control{
+.navbar .form-control{
 	width: 50%;
 	display: inline;
 }
