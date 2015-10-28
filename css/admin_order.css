@@ -1,0 +1,12 @@
+.ordertitle {
+	text-align: center;
+}
+
+.orderdetails {
+	text-align: center;
+	border:2px solid black;
+	padding: 30px;
+	margin: 50px 500px;
+}
+
+
