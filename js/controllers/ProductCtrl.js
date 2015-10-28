@@ -2,7 +2,7 @@ app.controller('ProductCtrl',ProductCtrl);
 
 function ProductCtrl(productService,$state){
 	this.productService = productService;
-	this.product = this.productService.productID;
+	this.product = this.productService.productView;
 	this.$state=$state;
 	
 }

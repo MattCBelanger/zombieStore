@@ -8,13 +8,31 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
 
     .state('home', {
         url: '/home',
-        templateUrl: 'templates/home.html'
+        views: {
+                nav: {
+                  templateUrl: 'templates/navbar.html',
+                  controller: 'NavCtrl as Ctrl'
+        },
+                content: {
+                    templateUrl: 'templates/home.html'
+        }
+      }
+        
+
     })
 
     .state('shop', {
         url: '/shop',
-        templateUrl: 'templates/shop.html',
-        controller: 'ShopCtrl as Ctrl',
+         views: {
+                nav: {
+                  templateUrl: 'templates/navbar.html',
+                  controller: 'NavCtrl as Ctrl'
+                },
+                content: {
+                    templateUrl: 'templates/shop.html',
+                     controller: 'ShopCtrl as Ctrl'
+                 }
+            },
         resolve: {
             products: function(productService) {
                 return productService.getProducts();
@@ -26,24 +44,40 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
 
     .state('product', {
         url: '/product',
-        templateUrl: 'templates/product.html',
-        controller: 'ProductCtrl as Ctrl',
-        // resolve: {
-            // products: function(productService) {
-            //     return productService.getProducts();
-            // }
-        // }
+        views: {
+                nav: {
+                  templateUrl: 'templates/navbar.html',
+                  controller: 'NavCtrl as Ctrl'
+                },
+                content: {
+                    templateUrl: 'templates/product.html',
+                    controller: 'ProductCtrl as Ctrl'
+        }
+      }
+        
     })
 
     .state('login', {
         url: '/login',
-        templateUrl: 'templates/login.html',
-        controller: 'AuthCtrl as Ctrl'
+        views: {
+                content: {
+                   templateUrl: 'templates/login.html',
+                    controller: 'AuthCtrl as Ctrl'
+                    }
+                }
     })
     .state('admin', {
         url: '/admin',
-        templateUrl: 'templates/admin.html',
-        controller: 'AdminCtrl as Ctrl',
+        views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
+                content: {
+                   templateUrl: 'templates/admin.html',
+                    controller: 'AdminCtrl as Ctrl'
+                    }
+                },
         resolve: {
 
                 // path: function($state) {
@@ -60,8 +94,16 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     })
     .state('admin-order', {
         url: '/admin-order',
-        templateUrl: 'templates/admin-order.html',
-        controller: 'OrderCtrl as Ctrl',
+         views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
+                content: {
+                   templateUrl: 'templates/admin-order.html',
+                    controller: 'OrderCtrl as Ctrl'
+                    }
+                },
         resolve: {
             orders: function(productService) {
                 return productService.getOrders();
@@ -70,24 +112,34 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     })
     .state('add_product', {
         url: '/add_product',
-        templateUrl: 'templates/add_product.html',
-        controller: 'ProductCtrl as Ctrl'
-      
+        views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
+                content: {
+                   templateUrl: 'templates/add_product.html',
+                    controller: 'ProductCtrl as Ctrl'
+                    }
+                }
     })
     .state('check', {
             url: '/checkout',
-            templateUrl: 'templates/checkout.html',
-            controller: 'CheckCtrl as Ctrl'
-        //       resolve: {
-        //     cart: function(productService) {
-        //         return productService.getCart();
-        //         }
-        // }
+            views: {
+                content: {
+                  templateUrl: 'templates/checkout.html',
+                    controller: 'CheckCtrl as Ctrl'
+                    }
+                }    
     })
     .state('cart', {
             url: '/cart',
-            templateUrl: 'templates/cart.html',
-            controller: 'CartCtrl as Ctrl'
+            views: {
+                content: {
+                  templateUrl: 'templates/cart.html',
+                 controller: 'CartCtrl as Ctrl'
+                    }
+                } 
     })
 
 
@@ -102,12 +154,24 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     //         }
     //     };
     // })
-    
+      .state('nav', {
+            url: '/navbar',
+            templateUrl: 'templates/navbar.html',
+            controller: 'NavCtrl as Ctrl'
+            
+    })
     .state('edit_product', {
         url: '/edit_product',
-        templateUrl: 'templates/edit_product.html',
-        controller: 'EditCtrl as Ctrl'
-      
+        views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
+                content: {
+                  templateUrl: 'templates/edit_product.html',
+                    controller: 'EditCtrl as Ctrl'
+                    }
+                } 
     });
 });
 

@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/checkout.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+
 
 	<!-- Icon fonts -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -41,6 +43,7 @@
 	<script type="text/javascript" src="js/controllers/CartCtrl.js"></script>
 	<script type="text/javascript" src="js/controllers/CheckCtrl.js"></script>
 	<script type="text/javascript" src="js/controllers/EditCtrl.js"></script>
+	<script type="text/javascript" src="js/controllers/navbarCtrl.js"></script>
 
 
 	<!-- Services -->
@@ -51,6 +54,12 @@
 	<!-- Directives -->
 </head>
 <body ng-app="ShopApp">
-	<ui-view></ui-view>
+
+	 <div ui-view name="nav"></div>
+
+  
+    <div ui-view name="content"></div>
+  
+	<!-- <ui-view></ui-view> -->
 </body>
 </html>
