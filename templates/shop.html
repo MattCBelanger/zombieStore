@@ -25,12 +25,13 @@
        <select class="form-control" ng-options="item.label for item in Ctrl.sortOptions" ng-model="Ctrl.selectedOption"></select>
      </div>
   </div>
-
+<section> 
+<div class="product-list-view">
   <div class="row">
-    <div class="col-xs-8 col-xs-offset-2 
-                col-sm-8 col-sm-offset-2 
-                col-md-3 col-md-offset-1 
-                col-lg-3 col-md-offset-1
+    <div class="col-xs-10 col-xs-offset-1 
+                col-sm-6 col-sm-offset-0 
+                col-md-4 col-md-offset-0 
+                col-lg-4 col-lg-offset-0
                 product-style 
                 text-center" 
                 ng-repeat="product in Ctrl.products 
@@ -53,3 +54,4 @@
     </div>
   </div>
 <hr>
+</section>

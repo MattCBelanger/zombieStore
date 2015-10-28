@@ -1,16 +1,15 @@
 .product-style {
 	box-sizing: border-box;
-	padding: 5px;
-	border: 5px solid #e3e3e3;
+	padding: 10px;
+	border: 8px solid #fcfcfc;
 	text-transform: capitalize;
-	margin-bottom: 10px;
 }
 .product-style h1, h2, h3 {
 	padding: .1em;
 	line-height: .75em;
 }
 .product-style img {
-	padding: .1em;
+	padding: 5px;
 }
 .product-style:active, .product-style:hover {
 	border: 5px solid #acacac;
@@ -27,10 +26,11 @@
 .product-style span.text-content {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
+	font-size: 1.5em;
 	letter-spacing: 2px;
-	background: rgba(0,0,0,0.5);
+	background: rgba(239, 72, 54,0.75);
 	color: white;
-	height: 50px;
+	height: 75px;
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -39,10 +39,10 @@
 }
 
 .product-style span.text-content span {
-  display: inline-block;
-    margin-top: 10px;
-  text-align: center;
-  vertical-align: middle;
+	display: inline-block;
+	margin-top: 25px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .product-style:hover span.text-content {
