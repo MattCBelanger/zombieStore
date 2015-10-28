@@ -188,19 +188,20 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                     controller: 'EditCtrl as Ctrl'
                     }
                 } 
-    });
-    //  $httpProvider.interceptors.push(function() {
-    //     return {
-    //         'request': function(config) {
-    //             config.headers = config.headers || {};
-    //             if (localStorage.authToken) {
-    //                 config.headers.Authorization = localStorage.authToken;
-    //             }
-    //             return config;
-    //         }
-    //     };
+    })
+     $httpProvider.interceptors.push(function() {
+        return {
+            'request': function(config) {
+                config.headers = config.headers || {};
+                if (localStorage.authToken) {
+                    config.headers.Authorization = localStorage.authToken;
+                }
+                return config;
+            }
+        };
     
      
 
+    });
 });
 
