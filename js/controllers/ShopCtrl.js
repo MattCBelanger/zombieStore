@@ -30,7 +30,7 @@ function ShopCtrl(productService,$state,products,$uibModal){
 
 ShopCtrl.prototype.changeID = function(product) {
 	console.log(product);
-	this.productService.setProductID(product);
+	this.productService.setProductView(product);
 	this.$state.go('product');
 };
 

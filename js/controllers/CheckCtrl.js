@@ -36,8 +36,17 @@ CheckCtrl.prototype.calculate = function(){
 	for(i=0;i<this.cart.length;i++){
 		console.log("hi");
 		this.total = this.total + (this.cart[i].customerQuantity *this.cart[i].price);
+	
+		// this.total = parseFloat(Math.round(this.total * 100) / 100).toFixed(2);
 	}
+
+
 	this.tax = this.total*0.13;
 
-	this.final_total = this.tax +this.total;
+	this.final_total = this.tax + this.total;
+	this.final_total = Number(this.final_total);
+	console.log(this.final_total);
+	
+
+
 }

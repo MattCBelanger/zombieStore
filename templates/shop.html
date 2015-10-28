@@ -1,7 +1,7 @@
 <div class="shop-jumbotron">
   <div class="jumbotron">
     <div class="container">
-      <h1>Shop</h1>
+      <h1>Equip yourself</h1>
     </div>
   </div>
 </div>
@@ -11,7 +11,7 @@
     <button ng-click="Ctrl.open()" class="btn btn-default">Cart</button>
   </div>
   <div class="row">
-    <form class="form-inline">
+    <form class="form-inline shop-search">
        <div class="form-group">
          <label for="search">Search</label>
          <input ng-model="Ctrl.productService.searchBar" type="text" class="form-control" id="search">
@@ -19,7 +19,7 @@
      </form>
   </div>
   <div class="row">
-    <div class="form-inline">
+    <div class="form-inline shop-search">
        <label for="search">Sort</label>
        <!-- TODO #6: show the list of sort options form the controller in this dropdown -->
        <select class="form-control" ng-options="item.label for item in Ctrl.sortOptions" ng-model="Ctrl.selectedOption"></select>
@@ -41,6 +41,7 @@
 
         <div ng-click="Ctrl.changeID(product)">
           <img src="http://www.raymears.com/_rm_pictures_/Gransfors-Outdoor-Axe1.jpg" alt="..." class="img-responsive col-md-12">
+          <span class="text-content"><span>+ Click for more details</span></span>
           <h2><strong>{{product.name}}</strong></h2>
           <h3>{{product.description}}</h3>
           <p>${{product.price}}</p>
@@ -51,3 +52,4 @@
       </div>
     </div>
   </div>
+<hr>

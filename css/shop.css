@@ -1,8 +1,9 @@
 .product-style {
+	box-sizing: border-box;
 	padding: 5px;
-	border: 2px solid #acacac;
+	border: 5px solid #e3e3e3;
 	text-transform: capitalize;
-	border-radius: 5px;
+	margin-bottom: 10px;
 }
 .product-style h1, h2, h3 {
 	padding: .1em;
@@ -12,9 +13,42 @@
 	padding: .1em;
 }
 .product-style:active, .product-style:hover {
-	border: 2px solid black;
+	border: 5px solid #acacac;
 }
 .shop-jumbotron .jumbotron {
-	background-image: url(../img/city.jpeg);
+	background-image: url(../img/bg-city.jpg);
 	background-size: cover;
+}
+.shop-search {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.product-style span.text-content {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	letter-spacing: 2px;
+	background: rgba(0,0,0,0.5);
+	color: white;
+	height: 50px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+}
+
+.product-style span.text-content span {
+  display: inline-block;
+    margin-top: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.product-style:hover span.text-content {
+  opacity: 1;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
