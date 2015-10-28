@@ -87,12 +87,13 @@ ProductService.prototype.getOrders = function(){
 	}
 }
 ProductService.prototype.addProduct = function(product){
+	var self = this;
  	//TODO: add the new product to the current product list and
  	//return the updated list
 	return this.api.request('/newproduct',product,'POST')
 			.then(function(response){
 				console.log(response);
-				//upddate on html pages???
+				self.products.push(response.data);
 			});;
 
 }
