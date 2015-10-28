@@ -7,11 +7,6 @@ function OrderConfirmCtrl(productService,$modalInstance,$state){
 }
 CartCtrl.prototype.ok = function () {
  			this.$modalInstance.close();
- 		
-  };
-
-CartCtrl.prototype.checkOut = function () {
- 			this.$modalInstance.close();
- 			this.$state.go('check');
+ 			this.$state.go('shop');
  		
   };
