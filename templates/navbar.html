@@ -15,31 +15,27 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <ul class="navbar-collapse" ng-class="{collapse: isCollapsed}">
+    <div class="navbar-collapse" ng-class="{collapse: isCollapsed}">
       
-      <form class="form-inline nav navbar-nav navbar-right test5">
-      <a class="fa fa-shopping-cart fa-3x" ng-click="Ctrl.open()"></a>
+      <form class="form-inline nav navbar-nav navbar-right">
+      <a class="fa fa-shopping-cart fa-3x leftPad" ng-click="Ctrl.open()"></a>
           <div class="nav navbar-nav searchPad">
               <label for="search">Search</label>
               <input ng-model="Ctrl.productService.searchBar" type="text" class="form-control" id="search">
               <a class="fa fa-search fa-2x" ui-sref="shop"></a>
-
           </div>
           
           
   
 
       </form>
-      <ul class="nav navbar-nav navbar-left">
+      <div class="nav navbar-nav navbar-left">
      
-      
-         <ul class="nav navbar-nav">
-        
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="shop">Shop</a></li>
             <li><a ui-sref="login">Login</a></li>
-       </ul>
-      </ul>
+       
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

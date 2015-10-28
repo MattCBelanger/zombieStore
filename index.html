@@ -8,10 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/checkout.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
-	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/shop.css">
 	<link rel="stylesheet" type="text/css" href="css/product.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/add_edit_product.css">
+	<link rel="stylesheet" type="text/css" href="css/viewcart.css">
 
 
 
@@ -19,8 +20,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	<!-- Google Fonts -->
-	
-	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
@@ -48,9 +47,8 @@
 	<script type="text/javascript" src="js/controllers/CheckCtrl.js"></script>
 	<script type="text/javascript" src="js/controllers/EditCtrl.js"></script>
 	<script type="text/javascript" src="js/controllers/navbarCtrl.js"></script>
+	<script type="text/javascript" src="js/controllers/Order_ConfirmationCtrl.js"></script>
 
-
-	
 
 
 	<!-- Services -->
@@ -62,10 +60,11 @@
 </head>
 <body ng-app="ShopApp">
 
-	 <div ui-view name="nav"></div>
+	<div ui-view name="nav"></div>
 
-  
     <div ui-view name="content"></div>
+
+    <div ui-view name="foot"></div>
   
 	<!-- <ui-view></ui-view> -->
 </body>

@@ -21,6 +21,7 @@ ProductCtrl.prototype.addProduct = function(name,description,price,img,category,
 	this.productService.addProduct(request_body);
 	alert("product added!");
 	
+	
 
 }
 
