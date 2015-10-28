@@ -15,9 +15,12 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
         },
                 content: {
                     templateUrl: 'templates/home.html'
+        },
+
+                foot: {
+                    templateUrl: 'templates/footer.html'
         }
-      }
-        
+      }  
 
     })
 
@@ -31,7 +34,11 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 content: {
                     templateUrl: 'templates/shop.html',
                      controller: 'ShopCtrl as Ctrl'
-                 }
+                 },
+
+                foot: {
+                    templateUrl: 'templates/footer.html'
+                }
             },
         resolve: {
             products: function(productService) {
@@ -54,7 +61,11 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 content: {
                     templateUrl: 'templates/product.html',
                     controller: 'ProductCtrl as Ctrl'
-        }
+                },
+
+                foot: {
+                    templateUrl: 'templates/footer.html'
+                }
       }
         
     })
@@ -92,9 +103,9 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                     }else{
                     return products;
                     }
-                }
+                
 
-        }
+       }         }
     })
     .state('admin-order', {
         url: '/admin-order',
@@ -130,9 +141,17 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     .state('check', {
             url: '/checkout',
             views: {
+                nav: {
+                  templateUrl: 'templates/navbar.html',
+                  controller: 'NavCtrl as Ctrl'
+                },
                 content: {
                   templateUrl: 'templates/checkout.html',
                     controller: 'CheckCtrl as Ctrl'
+                    },
+
+                    foot: {
+                    templateUrl: 'templates/footer.html'
                     }
                 }    
     })

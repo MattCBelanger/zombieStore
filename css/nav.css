@@ -1,6 +1,11 @@
 .navbar-nav{
 	text-align: center;
 }
+
+.navbar-left{
+	    margin-top: 15px;
+	    font-size: 1.2em;
+}
 .form-group{
 	padding-bottom: 0;
 }
@@ -15,7 +20,8 @@
 	margin: 0;
 	margin-top: 8px;
 }
-.fa-search{
+.leftPad{
+	 padding-left: 0;
 	}
 
 a, a:link, a:visited{
@@ -23,5 +29,8 @@ a, a:link, a:visited{
 }
 
 .searchPad{
-	padding-right: 25px;
+	padding-right: 0px;
+}
+.navbar-toggle{
+	    margin-bottom: 43px;
 }
