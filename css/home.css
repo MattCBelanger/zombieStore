@@ -5,7 +5,8 @@
 	 margin-top: 50px;
 	 border-bottom: 1px solid #ccc;
 	 background-image: url("../img/forest.jpg");
-	 background-size: contain;
+	 background-size: cover;
+	 
 }
 
 .categories_title_home{
