@@ -1,16 +1,23 @@
-
-<h1>
-	Orders
-</h1>
-<div ng-repeat="order in Ctrl.orders">
-	Cart: Order ID {{order.orderId}}
-	<div ng-repeat="item in order.cart">
-		<br>Item Bought: {{item.name}}<br>
-		Item Price: {{item.price}}<br>
-		Quantity: {{item.quantity}}<br>
-	</div>
-
-	
-	<p>Final Price: {{order.final_total}}</p>
-	
+<div class="ordertitle">
+	<h1>
+		Orders Feed
+	</h1>
 </div>
+
+
+	<div ng-repeat="order in Ctrl.orders">
+		<div class="orderdetails">
+
+		<strong>Order ID: {{order.orderId}}</strong>
+
+			<div class="ordervalues" ng-repeat="item in order.cart">
+				<div>Item Bought: {{item.name}}</div>
+				<div>Item Price: {{item.price}}</div>
+				<div>Quantity Bought: {{item.quantity}}</div>
+			</div>
+
+			<p>Total Paid: {{order.final_total}}</p>
+		
+		</div>
+
+	</div>

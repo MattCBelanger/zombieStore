@@ -1,0 +1,16 @@
+.ordertitle {
+	text-align: center;
+}
+
+.orderdetails {
+	text-align: center;
+	outline: 5px double #C94040;
+	padding: 30px;
+	margin: 50px 500px;
+}
+
+.ordervalues {
+	margin-top: 20px;
+}
+
+
