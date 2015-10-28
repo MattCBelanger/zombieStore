@@ -69,6 +69,10 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     .state('admin', {
         url: '/admin',
         views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
                 content: {
                    templateUrl: 'templates/admin.html',
                     controller: 'AdminCtrl as Ctrl'
@@ -91,6 +95,10 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     .state('admin-order', {
         url: '/admin-order',
          views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
                 content: {
                    templateUrl: 'templates/admin-order.html',
                     controller: 'OrderCtrl as Ctrl'
@@ -105,6 +113,10 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     .state('add_product', {
         url: '/add_product',
         views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
                 content: {
                    templateUrl: 'templates/add_product.html',
                     controller: 'ProductCtrl as Ctrl'
@@ -151,6 +163,10 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     .state('edit_product', {
         url: '/edit_product',
         views: {
+            nav: {
+                  templateUrl: 'templates/navbarAdmin.html'
+                  
+                },
                 content: {
                   templateUrl: 'templates/edit_product.html',
                     controller: 'EditCtrl as Ctrl'
