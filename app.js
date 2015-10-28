@@ -140,7 +140,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
             url: '/cart',
 
             templateUrl: 'templates/cart.html',
-            controller: 'CartCtrl as Ctrl'
+            controller: 'CartCtrl as Ctrl',
             views: {
                 content: {
                   templateUrl: 'templates/cart.html',

@@ -3,6 +3,7 @@ app.controller('AuthCtrl',AuthCtrl);
 function AuthCtrl(api,productService,$state){
 	this.api = api;
   this.productService = productService;
+  this.$state = $state;
 
 }
 AuthCtrl.prototype.authenticate = function(username,password){
@@ -23,7 +24,7 @@ AuthCtrl.prototype.authenticate = function(username,password){
       	self.productService.token = response.data.authToken;
       	console.log(self.productService.token);
       	
-		self.$state.go('admin');
+		    self.$state.go('admin');
       	// self.$state.go('admin', {}, {reload: true});
       	
 
