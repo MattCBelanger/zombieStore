@@ -12,8 +12,8 @@
 .product-details-page {
 	padding-top: 8em;
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
 .product-details-page {
-	padding-top: 4em;
+	padding-top: 7em;
 	}
 }
