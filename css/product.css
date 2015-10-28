@@ -12,7 +12,7 @@
 .product-details-page {
 	padding-top: 8em;
 }
-@media (mac-width: 600px) {
+@media (max-width: 600px) {
 .product-details-page {
 	padding-top: 4em;
 	}
