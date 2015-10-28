@@ -17,6 +17,11 @@
 .shop-jumbotron .jumbotron {
 	background-image: url(../img/bg-city.jpg);
 	background-size: cover;
+	padding-top: 100px;
+	height: 350px;
+}
+.shop-jumbotron .jumbotron h1{
+	color: #fff;
 }
 .shop-search {
 	padding-top: 10px;
@@ -40,7 +45,7 @@
 
 .product-style span.text-content span {
 	display: inline-block;
-	margin-top: 25px;
+	margin-top: 15px;
 	text-align: center;
 	vertical-align: middle;
 }

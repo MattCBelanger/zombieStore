@@ -28,12 +28,10 @@
      </div>
   </div> -->
 <section> 
+  <div class="container">
   <div class="product-list-view">
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 
-                  col-sm-6 col-sm-offset-0 
-                  col-md-4 col-md-offset-0 
-                  col-lg-4 col-lg-offset-0
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4
                   product-style 
                   text-center" 
                   ng-repeat="product in Ctrl.products 
@@ -54,6 +52,7 @@
             <button ng-click="Ctrl.addToCart(product)" class="btn btn-info">Add to Cart</button>
         </div>
       </div>
+    </div>
     </div>
   <hr>
 </section>
