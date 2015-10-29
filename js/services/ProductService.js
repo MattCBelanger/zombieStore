@@ -16,6 +16,7 @@ function ProductService(api){
 	//global search varibale used in search bar
 	this.searchBar = "";
 	this.token ="";
+	this.productEditing = "";
 }
 
 

@@ -27,6 +27,7 @@ AdminCtrl.prototype.editProduct = function(ID,product) {
 	console.log(ID);
 	console.log(product);
 	this.productService.productID = ID;
+	this.productService.productEditing = product;
 	// this.productService.editProd = product;
 	console.log(this.productService.productID);
 	console.log(this.productService.editProd);
