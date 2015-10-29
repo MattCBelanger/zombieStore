@@ -20,13 +20,15 @@
        </div>
      </form>
   </div> -->
- <!--  <div class="row">
+  <div class="container">
+  <div class="row">
     <div class="form-inline shop-search">
        <label for="search">Sort</label>
-       TODO #6: show the list of sort options form the controller in this dropdown
        <select class="form-control" ng-options="item.label for item in Ctrl.sortOptions" ng-model="Ctrl.selectedOption"></select>
      </div>
-  </div> -->
+  </div>
+  </div>
+  
 <section> 
   <div class="container">
   <div class="product-list-view">
@@ -46,6 +48,7 @@
             <h2><strong>{{product.name}}</strong></h2>
           
             <p>${{product.price}}</p>
+             <p>Category: {{product.category}}</p>
            
           </div>
           
