@@ -11,6 +11,8 @@
 			<strong>Order ID: {{order.orderId}}</strong>
 
 				<div class="ordervalues" ng-repeat="item in order.cart">
+					<div class="info" ng-show="item.firstname">First Name: {{item.firstname}}</div>
+					<div class="info" ng-show="item.lastname">Last Name: {{item.lastname}}</div>
 					<div>Item Bought: {{item.name}}</div>
 					<div>Item Price: {{item.price}}</div>
 					<div>Quantity Bought: {{item.quantity}}</div>
