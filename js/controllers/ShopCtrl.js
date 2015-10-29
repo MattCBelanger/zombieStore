@@ -11,6 +11,13 @@ function ShopCtrl(productService,$state,products,$uibModal){
 	console.log(this.products);
 	this.$uibModal = $uibModal;
 	this.cart = this.productService.cart;
+	
+	this.Weapons = "Weapons";
+	this.Tech = "Tech";
+	this.Food = "Food";
+	this.Health = "Health";
+	this.All = "";
+
 	//navbar search
 	// this.searchBar = this.productService.searchBar;
 
@@ -21,7 +28,7 @@ function ShopCtrl(productService,$state,products,$uibModal){
    {label: 'Name', sortField: 'name', reverse: false},
    {label: 'Price Low - High', sortField: 'price', reverse:false},
    {label: 'Price High - Low', sortField: 'price', reverse: true},
-    {label: 'Category', sortField: "category", reverse: false}
+   {label: 'Category', sortField: "category", reverse: false}
  ]
 
   this.selectedOption= this.sortOptions[0];
@@ -62,5 +69,9 @@ ShopCtrl.prototype.open = function(){
       
     });
 
+}
+
+ShopCtrl.prototype.choosecategory = function (string){
+	this.cat = string;
 }
 

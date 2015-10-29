@@ -84,7 +84,12 @@ ProductService.prototype.getOrders = function(){
 		   });
 	}
 	else{
+		
+		if (typeof self.orders == "object"){
+			return self.orders;
+		}else{
 		return JSON.parse(self.orders);
+		}
 	}
 }
 ProductService.prototype.addProduct = function(product){
@@ -94,7 +99,7 @@ ProductService.prototype.addProduct = function(product){
 	return this.api.request('/newproduct',product,'POST')
 			.then(function(response){
 				console.log(response);
-				// self.products.push(response.data);
+				self.products.push(response.data);
 			});;
 
 }
@@ -105,7 +110,7 @@ ProductService.prototype.addOrder = function(order){
 	return this.api.request('/record_order',order,'POST')
 			.then(function(response){
 				console.log(response);
-				//upddate on html pages???
+				self.orders.push(response.data);
 			});;
 
 }
