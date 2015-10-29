@@ -9,13 +9,20 @@
 				</h1>
 				</div>
 				
-			<form>	
-			<form class="form-inline">
+				
+			<form class="form-inline" ng-submit="Ctrl.addInfo(firstname,lastname,address,addressl2,city,province,postalcode,telephone)">
 
 				<div class="col-md-6">
 				  <div class="form-group">
 				    <label for="exampleInputName2">First Name</label>
-				    <input type="text" class="form-control" id="exampleInputName2">
+				    <input 
+				    	class="form-control" id="exampleInputName2"
+				    	type="text" 
+				    	name="firstname" 
+				    	ng-minlength="2"
+				    	ng-model="firstname"
+				    	required/>
+				    		<span ng-show="frm.firstname.$dirty && frm.firstname.$error.minlength">You Gotta Fill This In! </span>
 				  </div>
 				</div>
 
@@ -67,8 +74,9 @@
 				    <input type="text" class="form-control" id="exampleInputName2">
 				  </div>
 				</div>
+
+				<button class="btn btn-success order" ng-click="Ctrl.addInfo()">Order!</button>
 	
-			</form>
 			</form>
 				
        		</div>
@@ -120,6 +128,8 @@
 				    <input type="text" class="form-control" id="exampleInputName2">
 				  </div>
 				</div>
+
+
 					
 				</form>
        		</div>

@@ -8,10 +8,28 @@ function CheckCtrl(productService,$uibModal){
 	this.final_total=0;
 	this.total=0;
 	this.tax=0;
+	this.customerinfo={};
+
 
 	this.calculate();
 }
 
+CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city,province,postalcode,telephone){
+		this.customerinfo = {
+		firstname:firstname,
+		lastname:lastname,
+		address:address,
+		addressl2:addressl2,
+		city:city,
+		province:province,
+		postalcode:postalcode,
+		telephone:telephone
+		
+	}
+	console.log(this.customerinfo);
+	//this.customerinfo.splice();
+	
+}
 CheckCtrl.prototype.addOrder = function(){
 	//create the api request that makes the product on the backend
 	//as part of your response you need to add it to your current
@@ -53,6 +71,7 @@ CheckCtrl.prototype.calculate = function(){
 }
 
 CheckCtrl.prototype.open = function(){
+	this.cart.unshift(this.customerinfo);
 	var request_body = {
 		cart:this.cart,
 		total:this.total.toString(),
