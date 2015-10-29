@@ -28,60 +28,59 @@
 
 <div class="addprodtitle">
 	<div class="container">
-	<div class="row">
-		<h1>
-			Edit Product
-		</h1>
-	</div>
-	</div>
-
+		<div class="row">
+			<h1>
+				Edit Product
+			</h1>
+		</div>
+		
 	<div class="row">
 		<div class="addProductAll">
 			<form class="form-inline" ng-submit="Ctrl.editProduct(Ctrl.request_body.name,Ctrl.request_body.description,Ctrl.request_body.price,Ctrl.request_body.image,Ctrl.request_body.category,Ctrl.request_body.quantity,Ctrl.request_body.status)">
 
 			<div class="col-md-12">
-			  <div class="form-group">
+			  <div class="form-group form-group-lg">
 			    <label for="exampleInputName2">Product Name</label>
 			    <input type="text" class="form-control" ng-model="Ctrl.request_body.name">
 			  </div>
 			</div>
 
 			<div class="col-md-12">
-			  <div class="form-group">
+			  <div class="form-group form-group-lg">
 			    <label for="exampleInputEmail2">Description</label>
 			    <textarea type="text" class="form-control" ng-model="Ctrl.request_body.description"></textarea>
 			  </div>
+			</div>
 
 			<div class="col-md-12">
-			  <div class="form-group">
+			  <div class="form-group form-group-lg">
 			    <label for="exampleInputName2">Price</label>
 			    <input type="text" class="form-control" ng-model="Ctrl.request_body.price">
 			  </div>
-			  </div>
+			</div>
 
 			<div class="col-md-12">
-			  <div class="form-group">
+			  <div class="form-group form-group-lg">
 			    <label for="exampleInputName2">Image URL</label>
 			    <input type="text" class="form-control" ng-model="Ctrl.request_body.image">
 			  </div>
-			  </div>
+			</div>
 
 			<div class="col-md-12">
-			  <div class="form-group">
+			  <div class="form-group form-group-lg">
 			    <label for="exampleInputName2">Category</label>
 			    <input type="text" class="form-control" ng-model="Ctrl.request_body.category">
 			  </div>
-			  </div>
-
+			</div>
 			<div class="col-md-12">
-			  <div class="form-group">
+			  <div class="form-group form-group-lg">
 			    <label for="exampleInputName2">Quantity</label>
 			    <input type="text" class="form-control" ng-model="Ctrl.request_body.quantity">
 			  </div>
-			  </div>
+			</div>
 
 			<div class="col-md-12">
-			  <div class="form-group">
+			  <div class="form-group form-group-lg">
 			    <label for="exampleInputName2">Status</label>
 			    <select  class ="btn btn-info btn-lg "ng-model="Ctrl.request_body.status">
 			    	<option value="" selected>Status</option>
@@ -89,7 +88,7 @@
 					<option value="inactive">Inactive</option>
 			    </select>
 			  </div>
-			  </div>
+			</div>
 
 			<div class="col-md-12">
 			  <button class="btn btn-success">Edit Product</button>
@@ -98,4 +97,5 @@
 			</form>
 		</div>
 	</div>
+</div>
 </div>
