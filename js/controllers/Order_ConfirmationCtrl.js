@@ -5,7 +5,7 @@ function OrderConfirmCtrl(productService,$modalInstance,$state){
 	
 	this.$modalInstance = $modalInstance;
 }
-CartCtrl.prototype.ok = function () {
+OrderConfirmCtrl.prototype.ok = function () {
  			this.$modalInstance.close();
  			this.$state.go('shop');
  		
