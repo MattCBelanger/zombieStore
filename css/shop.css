@@ -3,6 +3,7 @@
 	padding: 10px;
 	border: 8px solid #fcfcfc;
 	text-transform: capitalize;
+	height: 450px;
 }
 .product-style h1, h2, h3 {
 	padding: .1em;
