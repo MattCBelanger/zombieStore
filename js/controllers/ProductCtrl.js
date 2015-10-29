@@ -5,6 +5,7 @@ function ProductCtrl(productService,$state){
 	this.product = this.productService.productView;
 	this.$state=$state;
 	
+	
 }
 ProductCtrl.prototype.addProduct = function(name,description,price,img,category,quantity,status){
 	
@@ -22,7 +23,7 @@ ProductCtrl.prototype.addProduct = function(name,description,price,img,category,
 	alert("Product added!");
 	
 	
-
+	
 }
 
 

@@ -63,13 +63,14 @@ ProductService.prototype.getProducts = function(){
 		console.log(self.products);
 		console.log(typeof self.products);
 		if (typeof self.products == "object"){
+			console.log(self.products);
 			return self.products;
 		}else{
 			console.log("json");
 		return JSON.parse(self.products);
 		}
 	}
-	console.log("getproducts end");
+	
 }
 
 ProductService.prototype.getOrders = function(){

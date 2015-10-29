@@ -49,6 +49,6 @@ EditCtrl.prototype.editProduct = function(name,description,price,img,category,qu
 			this.productService.products[i].status = status;
 		}
 	};
-
+	
 	this.$state.go('admin');
 };
