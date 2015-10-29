@@ -27,6 +27,17 @@ ProductCtrl.prototype.addProduct = function(name,description,price,img,category,
 
 
 ProductCtrl.prototype.addToCart= function(product){
+
+	var shopItem = product;
+
+	for(var i = 0; i<this.cart.length;i++){
+		if(shopItem.productId==this.cart[i].productId){
+			this.cart[i].customerQuantity++;
+			alert("product quantity increased!");
+			return
+		}
+	}
+	
 	this.product.customerQuantity = 1;
 	console.log(this.product.customerQuantity);
 	this.productService.addToCart(product);

@@ -10,6 +10,7 @@ function ShopCtrl(productService,$state,products,$uibModal){
 	this.products = products;
 	console.log(this.products);
 	this.$uibModal = $uibModal;
+	this.cart = this.productService.cart;
 	//navbar search
 	// this.searchBar = this.productService.searchBar;
 
@@ -37,6 +38,13 @@ ShopCtrl.prototype.changeID = function(product) {
 ShopCtrl.prototype.addToCart= function(product){
 	var shopItem = product;
 
+	for(var i = 0; i<this.cart.length;i++){
+		if(shopItem.productId==this.cart[i].productId){
+			this.cart[i].customerQuantity++;
+			alert("product quantity increased!");
+			return
+		}
+	}
 	shopItem.customerQuantity =1;
 	
 	console.log(shopItem.customerQuantity);
