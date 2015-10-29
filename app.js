@@ -194,7 +194,6 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 var products = productService.getProducts();
                 console.log(products);
                 return products;
-                console.log("resolve");
             }
 
         }
