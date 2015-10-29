@@ -1,4 +1,4 @@
-var app = angular.module('ShopApp', ['ui.router','ui.bootstrap','ngAnimate',]);
+var app = angular.module('ShopApp', ['ui.router','ui.bootstrap','ngAnimate','ngMessages']);
 
 app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
 
