@@ -19,7 +19,7 @@ ProductCtrl.prototype.addProduct = function(name,description,price,img,category,
 	}
 
 	this.productService.addProduct(request_body);
-	alert("product added!");
+	alert("Product added!");
 	
 	
 
@@ -41,7 +41,7 @@ ProductCtrl.prototype.addToCart= function(product){
 	this.product.customerQuantity = 1;
 	console.log(this.product.customerQuantity);
 	this.productService.addToCart(product);
-	alert("product added!");
+	alert("Product added!");
 	
 
 }
