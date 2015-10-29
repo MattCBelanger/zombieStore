@@ -100,7 +100,7 @@ ProductService.prototype.addProduct = function(product){
 	return this.api.request('/newproduct',product,'POST')
 			.then(function(response){
 				console.log(response);
-				self.products.push(response.data);
+				//self.products.push(response.data);
 			});;
 
 }
@@ -111,7 +111,7 @@ ProductService.prototype.addOrder = function(order){
 	return this.api.request('/record_order',order,'POST')
 			.then(function(response){
 				console.log(response);
-				self.orders.push(response.data);
+				//self.orders.push(response.data);
 			});;
 
 }

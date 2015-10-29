@@ -1,10 +1,11 @@
 app.controller('CheckCtrl',CheckCtrl);
 
-function CheckCtrl(productService,$uibModal){
+function CheckCtrl(productService,$uibModal,$state){
 	
 	this.productService = productService;
 	this.products = this.productService.products;
 	this.$uibModal=$uibModal;
+	this.$state = $state;
 	this.cart = this.productService.cart;
 	console.log(this.cart);
 	this.final_total=0;
@@ -18,6 +19,7 @@ function CheckCtrl(productService,$uibModal){
 
 CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city,province,postalcode,telephone,billfirstname,billcreditcard,billmonth,billyear,billcvc){
 		this.customerinfo = {
+
 		firstname:firstname,
 		lastname:lastname,
 		address:address,
@@ -79,6 +81,11 @@ CheckCtrl.prototype.calculate = function(){
 
 CheckCtrl.prototype.open = function(){
 
+if(this.cart.length ==0){
+		alert("Cart Empty!")
+		this.$state.go("home");
+		return;
+	}
 	
 
 for(var i=0;i<this.cart.length;i++){
@@ -119,9 +126,10 @@ for(var j=0;j<this.cart.length;j++){
 		
 	}
 	console.log(request_body);
-
+	console.log(this.cart.length);
+	
 	this.productService.addOrder(request_body);
-
+	
 
 //confirm modal
 	  this.$uibModal.open({
