@@ -14,7 +14,7 @@ function CheckCtrl(productService,$uibModal){
 	this.calculate();
 }
 
-CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city,province,postalcode,telephone){
+CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city,province,postalcode,telephone,billfirstname,billcreditcard,billmonth,billyear,billcvc){
 		this.customerinfo = {
 		firstname:firstname,
 		lastname:lastname,
@@ -23,7 +23,12 @@ CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city
 		city:city,
 		province:province,
 		postalcode:postalcode,
-		telephone:telephone
+		telephone:telephone,
+		billfirstname:billfirstname,
+		billcreditcard:billcreditcard,
+		billmonth:billmonth,
+		billyear:billyear,
+		billcvc:billcvc
 		
 	}
 	console.log(this.customerinfo);
