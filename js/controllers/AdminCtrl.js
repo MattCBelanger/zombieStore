@@ -8,6 +8,16 @@ function AdminCtrl(productService,$state,products){
 	this.products = products;
 	console.log(this.products);
 	this.$state = $state;
+
+	// var auth = localStorage.authToken == null;
+	// console.log(localStorage.authToken);
+	// if (!auth) {
+ //        console.log(localStorage.getItem('authToken'));
+ //        console.log("yoyo");
+ //        $state.go('login');
+   
+
+ //    }
 	
 }
 

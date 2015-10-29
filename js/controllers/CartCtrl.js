@@ -18,7 +18,12 @@ CartCtrl.prototype.ok = function () {
 
 CartCtrl.prototype.checkOut = function () {
  			this.$modalInstance.close();
- 			this.$state.go('check');
+ 			if((this.cart.length < 1) || (this.cart.length == null)){
+ 				alert("No items in cart");
+ 			}else{
+			this.$state.go('check');
+ 			}
+ 			
  		
   };
 
