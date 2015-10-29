@@ -1,6 +1,9 @@
 .addprodtitle {
 	text-align: center;
 }
+.addprodtitle .form-control{
+	width: 100%;
+}
 
 .addProductAll {
 	text-align: center;
