@@ -7,7 +7,11 @@ function AuthCtrl(api,productService,$state){
 
 }
 AuthCtrl.prototype.authenticate = function(username,password){
-	var self = this;
+	
+if(username == null){
+  return;
+}
+  var self = this;
 	var request_body = {
 		username:username,
 		password:password

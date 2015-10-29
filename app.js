@@ -68,17 +68,19 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 products: function(productService,$state) {
                     var products = productService.getProducts();
                     console.log(products);
-                    var state = localStorage.authToken == null;
-                    if (!state) {
-                        console.log(localStorage.getItem('authToken'));
-                        console.log("yoyo");
-                        $state.go('login');
-                    }else{
-                    //return products;
-                    }
+                    return products
+                }
+                    // var state = localStorage.authToken == null;
+                    // if (!state) {
+                    //     console.log(localStorage.getItem('authToken'));
+                    //     console.log("yoyo");
+                    //     $state.go('login');
+                    // }else{
+                    // //return products;
+                    // }
                 
 
-       }         }
+       }         
     })
 
     .state('admin-order', {
