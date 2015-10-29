@@ -26,9 +26,9 @@ AuthCtrl.prototype.authenticate = function(username,password){
       	
 		    self.$state.go('admin');
       	// self.$state.go('admin', {}, {reload: true});
-      	
-
-      
+      }
+      else{
+        localStorage.setItem('authToken',null);
       }
     });
  

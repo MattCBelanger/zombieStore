@@ -68,12 +68,13 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                 products: function(productService,$state) {
                     var products = productService.getProducts();
                     console.log(products);
-                    if (localStorage.getItem('authToken') == null) {
+                    var state = localStorage.authToken == null;
+                    if (!state) {
                         console.log(localStorage.getItem('authToken'));
                         console.log("yoyo");
                         $state.go('login');
                     }else{
-                    return products;
+                    //return products;
                     }
                 
 
@@ -126,7 +127,15 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
                     foot: {
                     templateUrl: 'templates/footer.html'
                     }
-                }    
+                },  
+                 resolve: {
+                        property:function(productService,$state) {
+                            console.log(productService.cart);
+                        if (productService.cart.length <1){
+                            $state.go('home');
+                        } 
+                    }
+                }
     })
     .state('cart', {
             url: '/cart',
@@ -188,11 +197,13 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
 
         }
     });
-    //  $httpProvider.interceptors.push(function() {
+
+    // $httpProvider.interceptors.push(function() {
     //     return {
     //         'request': function(config) {
     //             config.headers = config.headers || {};
     //             if (localStorage.authToken) {
+    //                 console.log('adding auth token to headers:'+localStorage.authToken);
     //                 config.headers.Authorization = localStorage.authToken;
     //             }
     //             return config;
