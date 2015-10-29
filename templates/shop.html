@@ -8,6 +8,21 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+    
+      <button ng-click="Ctrl.choosecategory(Ctrl.Weapons)" class="btn btn-primary categorybtn">Weapons</button>
+      <button ng-click="Ctrl.choosecategory(Ctrl.Tech)" class="btn btn-success categorybtn">Tech</button>
+      <button ng-click="Ctrl.choosecategory(Ctrl.Food)" class="btn btn-info categorybtn">Food</button>
+      <button ng-click="Ctrl.choosecategory(Ctrl.Health)" class="btn btn-warning categorybtn">Health</button>
+      <button ng-click="Ctrl.choosecategory(Ctrl.All)" class="btn btn-danger categorybtn">All</button>
+    </div>
+
+  </div>
+</div>
+
+
 <!-- <div class="container"> -->
   <!-- div class="row">
     <button ng-click="Ctrl.open()" class="btn btn-default">Cart</button>
@@ -38,10 +53,11 @@
                   text-center" 
                   ng-repeat="product in Ctrl.products 
                | filter: Ctrl.productService.searchBar
+               | filter: Ctrl.cat
 
                | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" ng-show="(product.status=='active')"
                >
-<!-- ng-show="(product.status=='active')" -->
+
           <div ng-click="Ctrl.changeID(product)">
             <img src="{{product.image}}" alt="..." class="img-responsive col-md-12">
             <span class="text-content"><span>+ Click for more details</span></span>

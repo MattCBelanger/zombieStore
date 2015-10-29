@@ -58,3 +58,10 @@
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
 }
+
+.categorybtn {
+	margin: 10px;
+}
+
+
+
