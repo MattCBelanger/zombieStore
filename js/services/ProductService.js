@@ -84,7 +84,12 @@ ProductService.prototype.getOrders = function(){
 		   });
 	}
 	else{
+		
+		if (typeof self.orders == "object"){
+			return self.orders;
+		}else{
 		return JSON.parse(self.orders);
+		}
 	}
 }
 ProductService.prototype.addProduct = function(product){
