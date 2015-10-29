@@ -18,7 +18,7 @@
 
 
 	<div class="productname col-md-2">
-		<button-primary ng-click="(product.customerQuantity = product.customerQuantity-1)">
+		<button class="btn btn-primary" ng-click="(product.customerQuantity = product.customerQuantity-1)" ng-disabled="product.customerQuantity==1">
 			<i class="quantity fa fa-minus-square fa-2x"></i>
 		</button>
 	</div>
@@ -28,11 +28,13 @@
 	</div>
 
 	<div class="productname col-md-2">
-		<btn-primary ng-click="(product.customerQuantity = product.customerQuantity+1)">
+		<button  class="btn btn-primary"ng-click="(product.customerQuantity = product.customerQuantity+1)">
 		<i class=" quantity fa fa-plus-square fa-2x"> </i>
 		</button>
 	</div>
-
+	<div>
+		<button class="btn btn-danger" ng-click="removeItem(product.Id)"></button>
+	</div>
 
 </div>
 </div>
