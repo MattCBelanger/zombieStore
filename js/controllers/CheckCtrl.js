@@ -75,7 +75,7 @@ for(var j=0;j<this.cart.length;j++){
 		description:this.cart[j].description,
 		price:this.cart[j].price,
 		category:this.cart[j].category,
-		image: this.cart[j].img,
+		image: this.cart[j].image,
 		quantity:quan,
 		status:this.cart[j].status
 	}
