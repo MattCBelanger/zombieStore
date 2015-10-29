@@ -31,7 +31,7 @@
                   text-center" 
                   ng-repeat="product in Ctrl.products">
           <div>
-            <img src="http://www.raymears.com/_rm_pictures_/Gransfors-Outdoor-Axe1.jpg" alt="..." class="img-responsive col-md-12">
+            <img src="{{product.image}}">
             <h2><strong>{{product.name}}</strong></h2>
             <p>${{product.price}}</p>
             <p>In stock: {{product.quantity}}</p>
