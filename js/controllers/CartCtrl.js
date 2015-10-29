@@ -24,8 +24,10 @@ CartCtrl.prototype.checkOut = function () {
 
  
  CartCtrl.prototype.removeItem = function (ID) {
- 			for(i=0;i<this.cart.length;i++){
+
+ 			for(var i=0;i<this.cart.length;i++){
  				if(this.cart[i].productId==ID){
+ 					console.log("removed");
  					this.cart.splice(i,1);
  				}
  			}

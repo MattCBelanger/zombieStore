@@ -2,7 +2,7 @@
 	items in cart
 </h1>
 
-<div class=" productorder col-xs-12" ng-repeat="product in Ctrl.cart">
+<div class="productorder col-xs-12" ng-repeat="product in Ctrl.cart">
 <div class="row">
 <div class="itemsincart">
 
@@ -33,11 +33,11 @@
 		</button>
 	</div>
 	<div>
-		<button class="btn btn-danger" ng-click="removeItem(product.Id)"></button>
+		<button class="btn btn-danger" ng-click="Ctrl.removeItem(product.productId)">Delete Item</button>
 	</div>
 
-</div>
-</div>
+	</div>
+	</div>
 </div>
 
 
