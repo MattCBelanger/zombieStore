@@ -1,7 +1,10 @@
-var app = angular.module('ShopApp', ['ui.router','ui.bootstrap','ngAnimate','ngMessages']);
+var app = angular.module('ShopApp', ['ui.router','ui.bootstrap','ngAnimate','ngMessages','ngAnimate','toastr']);
 
-app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
 
+
+app.config(function($stateProvider, $httpProvider, $urlRouterProvider, toastrConfig) {
+
+    // toastrConfig.positionClass = 'toast-bottom-right';
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider
@@ -23,6 +26,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
       }  
 
     })
+
     .state('product', {
         url: '/product',
         views: {
@@ -211,8 +215,9 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider) {
     //         }
     //     };
     
-     
+    
 
     // });
 });
+
 

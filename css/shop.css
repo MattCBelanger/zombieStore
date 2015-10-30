@@ -67,13 +67,14 @@
 .categorybtn {
 	margin: 10px;
 }
-
 .bottom-aligned {
 	margin-bottom:7px; 
 }
-
 .product-list-view .row {
 	height: 450px;
+}
+#toast-container {
+	margin-top: 80px;
 }
 
 
