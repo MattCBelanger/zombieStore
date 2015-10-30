@@ -27,7 +27,13 @@
 a, a:link, a:visited{
 	color: gray;
 }
-
+a:active, a:hover{
+	transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-delay: initial;
+	color: #fff;
+}
 .searchPad{
 	padding-right: 0px;
 }
