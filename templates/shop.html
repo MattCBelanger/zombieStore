@@ -32,7 +32,7 @@
   <div class="container">
     <div class="product-list-view">
       <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6
                     product-style 
                     text-center" 
                     ng-repeat="product in Ctrl.products 
@@ -51,8 +51,9 @@
                  <p>Category: {{product.category}}</p>
   
               </div>
-              
-                <button ng-click="Ctrl.addToCart(product)" class="btn btn-info bottom-aligned">Add to Cart</button>
+              <div class="row bottom-aligned">
+                <button ng-click="Ctrl.addToCart(product)" class="btn btn-info">Add to Cart</button>
+              </div>
           </div>
         </div>
       </div>
