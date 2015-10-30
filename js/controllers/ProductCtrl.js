@@ -1,9 +1,11 @@
 app.controller('ProductCtrl',ProductCtrl);
 
-function ProductCtrl(productService,$state){
+function ProductCtrl(productService,$state,toastr){
 	this.productService = productService;
 	this.product = this.productService.productView;
 	this.$state=$state;
+	this.toastr = toastr;
+	this.cart = this.productService.cart;
 	
 	
 }
@@ -22,8 +24,6 @@ ProductCtrl.prototype.addProduct = function(name,description,price,img,category,
 	this.productService.addProduct(request_body);
 	alert("Product added!");
 	
-	
-	
 }
 
 
@@ -34,15 +34,18 @@ ProductCtrl.prototype.addToCart= function(product){
 	for(var i = 0; i<this.cart.length;i++){
 		if(shopItem.productId==this.cart[i].productId){
 			this.cart[i].customerQuantity++;
-			alert("product quantity increased!");
+			this.toastr.success('Your '+ shopItem.name +' quantity has been increase!', 'Success!');
+	
 			return
 		}
 	}
 	
 	this.product.customerQuantity = 1;
 	console.log(this.product.customerQuantity);
-	this.productService.addToCart(product);
-	alert("Product added!");
+	console.log(shopItem);
+	this.productService.addToCart(shopItem);
+	// alert("Product added!");
+	this.toastr.success('Your '+ shopItem.name +' has been added.', 'Success!');
 	
 
 }
