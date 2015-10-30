@@ -1,9 +1,10 @@
 app.controller('EditCtrl',EditCtrl);
 
-function EditCtrl(productService,$state){
+function EditCtrl(productService,$state,toastr){
 	this.productService = productService;
 	this.$state=$state;
 	this.test="test";
+	this.toastr=toastr;
 	this.fakeProd = this.productService.productEditing;
 	this.request_body = {
 		name:this.fakeProd.name,
@@ -33,7 +34,9 @@ EditCtrl.prototype.editProduct = function(name,description,price,img,category,qu
 	}
 
 	this.productService.EditProduct(request_body);
-	alert("Product editted!");
+	
+
+	this.toastr.success(request_body.name +' Product has been editted!', 'Success!');
 	
 	for (i=0;i<this.productService.products.length;i++){
 		
