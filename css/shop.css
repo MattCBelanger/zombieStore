@@ -3,7 +3,7 @@
 	padding: 10px;
 	border: 8px solid #fcfcfc;
 	text-transform: capitalize;
-	height: 400px;
+	height: 425px;
 	cursor: pointer;
 }
 .product-style h1, h2, h3 {
@@ -69,11 +69,7 @@
 }
 
 .bottom-aligned {
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom:7px; 
-	position: relative;
-	bottom: 0;
 }
 
 
