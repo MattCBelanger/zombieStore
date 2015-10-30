@@ -74,10 +74,10 @@
 .categorybtn {
 	margin: 10px;
 }
-/*.bottom-aligned {
-	margin-bottom:7px; 
-	padding-bottom: 15px;
-}*/
+.bottom-aligned {
+	position: absolute;
+	bottom:0;
+}
 #toast-container {
 	margin-top: 80px;
 }
