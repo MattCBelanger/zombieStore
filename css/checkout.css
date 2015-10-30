@@ -1,4 +1,4 @@
-.test .container {
+.test, .checkoutinfo, .billinginfo {
 	padding: 50px 300px 80px 300px;
 }
 .checkout .billing {
@@ -56,3 +56,6 @@
 	margin-top: 50px;
 }
 
+.form-groupp {
+	padding:10px;
+}
