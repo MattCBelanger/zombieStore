@@ -113,7 +113,7 @@ CheckCtrl.prototype.open = function(){
 			var quan = (this.cart[j].quantity - this.cart[j].customerQuantity);
 
 			if(quan==0){
-				this.cart[j].status=="Inactive";
+				this.cart[j].status="Inactive";
 			}
 
 			var request_body = {
