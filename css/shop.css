@@ -3,7 +3,6 @@
 	padding: 10px;
 	border: 8px solid #fcfcfc;
 	text-transform: capitalize;
-	height: 425px;
 	cursor: pointer;
 }
 .product-style h1, h2, h3 {
@@ -40,7 +39,7 @@
 	letter-spacing: 2px;
 	background: rgba(239, 72, 54,0.75);
 	color: white;
-	height: 75px;
+/*	height: 75px;*/
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -52,6 +51,7 @@
 .product-style span.text-content span {
 	display: inline-block;
 	margin-top: 15px;
+	margin-bottom: 15px;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -72,5 +72,8 @@
 	margin-bottom:7px; 
 }
 
+.product-list-view .row {
+	height: 450px;
+}
 
 
