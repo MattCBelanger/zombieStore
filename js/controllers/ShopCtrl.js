@@ -1,7 +1,7 @@
 app.controller('ShopCtrl', ShopCtrl);
 
 
-function ShopCtrl(productService,$state,products,$uibModal){
+function ShopCtrl(productService,$state,products,$uibModal,toastr){
 	var self = this;
 
 	//services
@@ -17,6 +17,7 @@ function ShopCtrl(productService,$state,products,$uibModal){
 	this.Food = "Food";
 	this.Health = "Health";
 	this.All = "";
+	this.toastr = toastr;
 
 	//navbar search
 	// this.searchBar = this.productService.searchBar;
@@ -56,7 +57,8 @@ ShopCtrl.prototype.addToCart= function(product){
 	
 	console.log(shopItem.customerQuantity);
 	this.productService.addToCart(shopItem);
-	alert("product added!");
+	// alert("product added!");
+	this.toastr.success('Your '+ shopItem.name +' has been added.', 'Success!');
 	
 };
 
