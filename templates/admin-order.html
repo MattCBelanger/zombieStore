@@ -8,7 +8,7 @@
 		<div class="ordertitle" ng-repeat="order in Ctrl.orders">
 			<div class="orderdetails">
 
-			<strong>Order ID: {{order.orderId}}</strong>
+			<h4>Order ID: {{order.orderId}}</h4>
 
 				<div class="ordervalues" ng-repeat="item in order.cart">
 					<div class="info" ng-show="item.firstname">First Name: {{item.firstname}}</div>
@@ -20,14 +20,14 @@
 					<div class="info" ng-show="item.postalcode">Province: {{item.postalcode}}</div>
 					<div class="info" ng-show="item.telephone">Province: {{item.telephone}}</div>
 
-					<div class="info" ng-show="item.billfirstname">First Name: {{item.billfirstname}}</div>
-					<div class="info" ng-show="item.billlastname">Last Name: {{item.billlastname}}</div>
+					<div class="info" ng-show="item.billfirstname">Name on Card: {{item.billfirstname}}</div>
+					<div class="info" ng-show="item.billlastname">Card: {{item.billlastname}}</div>
 					<div class="info" ng-show="item.billaddress">Address: {{item.billaddress}}</div>
 					<div class="info" ng-show="item.billaddressl2">Address Line 2: {{item.billaddressl2}}</div>
-					<div class="info" ng-show="item.billcity">City: {{item.billcity}}</div>
+					<div class="info" ng-show="item.billcity">City: {{item.billc}}</div>
 					<div class="info" ng-show="item.billprovince">Province: {{item.billprovince}}</div>
 					<div class="info" ng-show="item.billpostalcode">Province: {{item.billpostalcode}}</div>
-					<div class="info" ng-show="item.billtelephone">Province: {{item.billtelephone}}</div>
+					<div class="info" ng-show="item.billtelephone">Province: {{item.billcvc}}</div>
 					&nbsp;
 					<div ng-show="item.name" >Item Bought: {{item.name}}</div>
 					<div ng-show="item.price">Item Price: {{item.price}}</div>
