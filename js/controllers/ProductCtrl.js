@@ -22,7 +22,8 @@ ProductCtrl.prototype.addProduct = function(name,description,price,img,category,
 	}
 
 	this.productService.addProduct(request_body);
-	alert("Product added!");
+	this.toastr.success('Your '+ request_body.name +' has been added.', 'Success!');
+	this,$state.go('admin');
 	
 }
 
