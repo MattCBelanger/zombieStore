@@ -12,6 +12,7 @@ function CheckCtrl(productService,$uibModal,$state){
 	this.total=0;
 	this.tax=0;
 	this.customerinfo={};
+	this.infoSubmitted= false;
 
 
 	this.calculate();
@@ -36,6 +37,10 @@ CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city
 		
 	}
 	console.log(this.customerinfo);
+	this.cart.unshift(this.customerinfo);
+	console.log(this.cart);
+
+	this.infoSubmitted=true;
 	//this.customerinfo.splice();
 	
 }
@@ -80,6 +85,10 @@ CheckCtrl.prototype.calculate = function(){
 }
 
 CheckCtrl.prototype.open = function(){
+	if(this.infoSubmitted==false){
+		alert("Submit your information!")
+		return;
+	}
 
 if(this.cart.length ==0){
 		alert("Cart Empty!")
@@ -117,7 +126,7 @@ for(var j=0;j<this.cart.length;j++){
 	console.log("passed for both fors");
 
 
-	this.cart.unshift(this.customerinfo);
+	
 	var request_body = {
 		cart:this.cart,
 		total:this.total.toString(),

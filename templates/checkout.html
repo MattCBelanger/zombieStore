@@ -4,7 +4,7 @@
 
 		<div class="container">
 	       	<div class="row">
-	       		<div class="col-lg-12">
+	       		<div class="col-sm-12">
 	       			<div class="headerz">
 	       			<h1>
 						1. Shipping
@@ -15,8 +15,8 @@
 				
 					<div class="col-md-6">
 					  <div class="form-group">
-					    <label for="exampleInputName2">First Name</label>
-					    <input class="form-control" id="exampleInputName2"type="text" name="firstname" ng-minlength="2" ng-model="Ctrl.customerinfo.firstname"required/>
+					    <label>First Name</label>
+					    <input class="form-control"type="text" name="firstname" ng-minlength="2" ng-model="firstname"required>
 				    	<span ng-messages="frm.firstname.$dirty && frm.firstname.$error">	
 				    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 				    	</span>
@@ -26,8 +26,8 @@
 
 					<div class="col-md-6">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Last Name</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="lastname" ng-minlength="2" ng-model="Ctrl.customerinfo.lastname" required/>
+					    <label>Last Name</label>
+					    <input type="text" class="form-control" name="lastname" ng-minlength="2" ng-model="lastname">
 
 					    <span ng-messages="frm.lastname.$dirty && frm.lastname.$error">	
 				    		<span ng-message="minlength"> You Gotta Fill This In! </span>
@@ -35,28 +35,29 @@
 
 					  </div>
 					</div>
-
+&nbsp;
 					<div class="col-md-12">
+ 					<label>Address</label>
 					  <div class="form-group">
-					    <label for="exampleInputName2">Address</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="address" ng-model="Ctrl.customerinfo.address" ng-minlength="10"/required>
+					   
+					    <input type="text" class="form-control"name="address" ng-model="address" ng-minlength="4">
 						    <span ng-messages="frm.address.$dirty && frm.address.$error">	
 					    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 					    	</span>
 					  </div>
 					</div>
-
+					
 					<div class="col-md-12">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Address line 2</label>
-					    <input type="text" class="form-control" id="exampleInputName2">
+					   	<label>Address Line 2</label>
+					    <input type="text" class="form-control" ng-model="addressl2">
 					  </div>
 					</div>
 
 					<div class="col-md-6">
 					  <div class="form-group">
 					    <label for="exampleInputName2">City</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="city" ng-minlength="5" ng-model="Ctrl.customerinfo.city" required/>
+					    <input type="text" class="form-control" name="city" ng-minlength="2" ng-model="city">
 					    	 <span ng-messages="frm.city.$dirty && frm.city.$error">	
 					    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 					    	</span>
@@ -65,8 +66,8 @@
 
 					<div class="col-md-6">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Province</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="province" ng-minlength="6" ng-model="Ctrl.customerinfo.province" /required>
+					    <label>Province</label>
+					    <input type="text" class="form-control" name="province" ng-minlength="2" ng-model="province">
 					    	 <span ng-messages="frm.province.$dirty && frm.province.$error">	
 					    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 					    	</span>
@@ -75,8 +76,8 @@
 
 					<div class="col-md-6">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Postal Code</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="postalcode" ng-minlength="6" ng-maxlength="6" ng-model="Ctrl.customerinfo.postalcode" required>
+					    <label>Postal Code</label>
+					    <input type="text" class="form-control" name="postalcode" ng-minlength="6" ng-maxlength="6" ng-model="postalcode">
 					    	 <span ng-messages="frm.postalcode.$dirty && frm.postalcode.$error">	
 					    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 					    		<span ng-message="maxlength"> You Gotta Fill This In! </span>
@@ -86,8 +87,8 @@
 
 					<div class="col-md-6">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Telephone</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="telephone" ng-minlength="10" ng-maxlength="10" ng-model="Ctrl.customerinfo.telephone" /required>
+					    <label>Telephone</label>
+					    <input type="text" class="form-control" name="telephone" ng-minlength="3" ng-maxlength="10" ng-model="telephone">
 					     <span ng-messages="frm.telephone.$dirty && frm.telephone.$error">	
 					    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 					    		<span ng-message="maxlength"> You Gotta Fill This In! </span>
@@ -113,8 +114,8 @@
 
 					<div class="col-md-12">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Name on Card</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="billfirstname" ng-minlength="2" ng-model="Ctrl.customerinfo.billfirstname" required/>
+					    <label>Name on Card</label>
+					    <input type="text" class="form-control" name="billfirstname" ng-minlength="2" ng-model="billfirstname">
 				    	<span ng-messages="frm.billfirstname.$dirty && frm.billfirstname.$error">	
 				    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 				    	</span>
@@ -123,8 +124,8 @@
 
 					<div class="col-md-12">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Card Number</label>
-					    <input type="text" class="form-control" id="exampleInputName2" name="billcreditcard" ng-minlength="16" ng-maxlength="16" ng-model="Ctrl.customerinfo.billcreditcard" required/>
+					    <label>Card Number</label>
+					    <input type="text" class="form-control" name="billcreditcard" ng-minlength="4" ng-maxlength="16" ng-model="billcreditcard">
 				    	<span ng-messages="frm.billcreditcard.$dirty && frm.billcreditcard.$error">	
 				    		<span ng-message="minlength"> You Gotta Fill This In! </span>
 				    		<span ng-message="maxlength"> You Gotta Fill This In! </span>
@@ -134,19 +135,19 @@
 
 					<div class="col-md-4">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Month</label>
-					    <input type="text" class="form-control" id="exampleInputName2" placeholder="Month" name="billmonth" ng-minlength="2" ng-maxlength="2" ng-model="Ctrl.customerinfo.billmonth" required/>
+					    <label>Month</label>
+					    <input type="text" class="form-control" placeholder="Month" name="billmonth" ng-minlength="2" ng-maxlength="2" ng-model="billmonth">
 					    	<span ng-messages="frm.billmonth.$dirty && frm.billmonth.$error">	
-				    			<span ng-message="minlength"> You Gotta Fill This In! </span>
-				    			<span ng-message="maxlength"> You Gotta Fill This In! </span>
+				    			<span ng-message="minlength">  Only 2 characters</span>
+				    			<span ng-message="maxlength"> Only 2 characters </span>
 				    		</span>
 					  </div>
 					</div>
 
 					<div class="col-md-4">
 					  <div class="form-group">
-					    <label for="exampleInputName2">Year</label>
-					    <input type="text" class="form-control" id="exampleInputName2" placeholder="Year" name="billyear" ng-minlength="4" ng-maxlength="4" ng-model="Ctrl.customerinfo.billyear" required/>
+					    <label>Year</label>
+					    <input type="text" class="form-control" placeholder="Year" name="billyear" ng-minlength="4" ng-maxlength="4" ng-model="billyear">
 					    	<span ng-messages="frm.billyear.$dirty && frm.billyear.$error">	
 				    			<span ng-message="minlength"> You Gotta Fill This In! </span>
 				    			<span ng-message="maxlength"> You Gotta Fill This In! </span>
@@ -156,11 +157,11 @@
 
 					<div class="col-md-4">
 					  <div class="form-group">
-					    <label for="exampleInputName2">CVC</label>
-					    <input type="text" class="form-control" id="exampleInputName2" placeholder="cvc" name="billcvc" ng-minlength="3" ng-maxlength="3" ng-model="Ctrl.customerinfo.billcvc" required/>
+					    <label>CVC</label>
+					    <input type="number" class="form-control" placeholder="cvc" name="billcvc" ng-minlength="3" ng-maxlength="3" ng-model="billcvc">
 					    	<span ng-messages="frm.billcvc.$dirty && frm.billcvc.$error">	
 				    			
-				    			<span ng-message="maxlength"> You Gotta Fill This In! </span>
+				    			<span ng-message="maxlength"> Only 3 digits </span>
 				    		</span>
 
 					  </div>
@@ -171,8 +172,9 @@
 	       		</div>
 	       	</div>
 	    </div>
+	    <button class="btn btn-success order">Submit Info!</button>
 	    </div>
-	    <button class="btn btn-success order" ng-click="Ctrl.addInfo()">Order!</button>
+	    
 		
 	</form>
 
