@@ -29,9 +29,9 @@
 					<div class="info" ng-show="item.billpostalcode">Province: {{item.billpostalcode}}</div>
 					<div class="info" ng-show="item.billtelephone">Province: {{item.billtelephone}}</div>
 					&nbsp;
-					<div>Item Bought: {{item.name}}</div>
-					<div>Item Price: {{item.price}}</div>
-					<div>Quantity Bought: {{item.quantity}}</div>
+					<div ng-show="item.name" >Item Bought: {{item.name}}</div>
+					<div ng-show="item.price">Item Price: {{item.price}}</div>
+					<div ng-show="item.quantity">Quantity Bought: {{item.quantity}}</div>
 				</div>
 
 				<p>Total Paid: {{order.final_total}}</p>
