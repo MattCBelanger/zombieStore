@@ -28,8 +28,7 @@ function ShopCtrl(productService,$state,products,$uibModal,toastr){
     this.sortOptions = [
    {label: 'Name', sortField: 'name', reverse: false},
    {label: 'Price Low - High', sortField: 'price', reverse:false},
-   {label: 'Price High - Low', sortField: 'price', reverse: true},
-   {label: 'Category', sortField: "category", reverse: false}
+   {label: 'Price High - Low', sortField: 'price', reverse: true}
  ]
 
   this.selectedOption= this.sortOptions[0];
