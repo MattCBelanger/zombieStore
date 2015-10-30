@@ -17,6 +17,9 @@ function ProductService(api){
 	this.searchBar = "";
 	this.token ="";
 	this.productEditing = "";
+	
+	this.homeClickSearch= "";
+
 }
 
 

@@ -40,7 +40,7 @@ CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city
 	console.log(this.customerinfo);
 	
 	console.log(this.cart);
-
+ 	this.toastr.success('Your information has been submitted!', 'Success');
 	this.infoSubmitted=true;
 	//this.customerinfo.splice();
 	
@@ -86,6 +86,7 @@ CheckCtrl.prototype.calculate = function(){
 }
 
 CheckCtrl.prototype.open = function(){
+
 	if(this.infoSubmitted==false){
 		 this.toastr.error('Submit your information!', 'Error!');
 		return;
@@ -110,6 +111,11 @@ CheckCtrl.prototype.open = function(){
 			this.productService.productID = this.cart[j].productId;
 
 			var quan = (this.cart[j].quantity - this.cart[j].customerQuantity);
+
+			if(quan==0){
+				this.cart[j].status="Inactive";
+			}
+
 			var request_body = {
 
 			name:this.cart[j].name,
