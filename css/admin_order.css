@@ -1,9 +1,20 @@
 .ordertitle {
 	text-align: center;
 }
-.info{
-	font-weight: bold;
+.orderIdTitle, .order-labelling {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	text-align: left;
 }
-.ordertitle hr {
-	color: #fff;
+.orderIdTitle {
+	font-size: 1.5em;
+}
+.order-labelling {
+	font-size: 1em;
+}
+.order-hr {
+	background-color: #ababab;
+}
+.ordervalues, .order-total-align {
+	text-align: left;
 }
