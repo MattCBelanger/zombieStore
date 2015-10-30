@@ -1,11 +1,12 @@
 app.controller('CheckCtrl',CheckCtrl);
 
-function CheckCtrl(productService,$uibModal,$state){
+function CheckCtrl(productService,$uibModal,$state,toastr){
 	
 	this.productService = productService;
 	this.products = this.productService.products;
 	this.$uibModal=$uibModal;
 	this.$state = $state;
+	this.toastr=toastr;
 	this.cart = this.productService.cart;
 	console.log(this.cart);
 	this.final_total=0;
@@ -86,7 +87,7 @@ CheckCtrl.prototype.calculate = function(){
 
 CheckCtrl.prototype.open = function(){
 	if(this.infoSubmitted==false){
-		alert("Submit your information!")
+		 this.toastr.error('Submit your information!', 'Error!');
 		return;
 	}
 
@@ -99,7 +100,7 @@ if(this.cart.length ==0){
 
 for(var i=0;i<this.cart.length;i++){
 			if(Number(this.cart[i].quantity) < this.cart[i].customerQuantity){
-				alert("We only have " + this.cart[i].quantity+" "+this.cart[i].name+ "s left, please change your quantity in cart");
+				this.toastr.error("We only have " + this.cart[i].quantity+" "+this.cart[i].name+ "s left, please change your quantity in cart", "Error!");
 				return;
 			}
 }
