@@ -145,7 +145,9 @@ CheckCtrl.prototype.open = function(){
 	console.log(this.cart.length);
 	
 	this.productService.addOrder(request_body);
-	
+
+	this.productService.products = null;
+	this.productService.orders = null;
 
 //confirm modal
 	  this.$uibModal.open({
