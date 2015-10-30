@@ -38,7 +38,7 @@ CheckCtrl.prototype.addInfo = function(firstname,lastname,address,addressl2,city
 		
 	}
 	console.log(this.customerinfo);
-	this.cart.unshift(this.customerinfo);
+	
 	console.log(this.cart);
 
 	this.infoSubmitted=true;
@@ -91,41 +91,41 @@ CheckCtrl.prototype.open = function(){
 		return;
 	}
 
-if(this.cart.length ==0){
-		alert("Cart Empty!")
-		this.$state.go("home");
-		return;
+	if(this.cart.length ==0){
+			 this.toastr.error('Cart is empty!', 'Error!');
+			this.$state.go("home");
+			return;
 	}
 	
 
-for(var i=0;i<this.cart.length;i++){
-			if(Number(this.cart[i].quantity) < this.cart[i].customerQuantity){
-				this.toastr.error("We only have " + this.cart[i].quantity+" "+this.cart[i].name+ "s left, please change your quantity in cart", "Error!");
-				return;
-			}
-}
-	
-for(var j=0;j<this.cart.length;j++){
-
-		this.productService.productID = this.cart[j].productId;
-
-		var quan = (this.cart[j].quantity - this.cart[j].customerQuantity);
-		var request_body = {
-
-		name:this.cart[j].name,
-		description:this.cart[j].description,
-		price:this.cart[j].price,
-		category:this.cart[j].category,
-		image: this.cart[j].image,
-		quantity:quan,
-		status:this.cart[j].status
+	for(var i=0;i<this.cart.length;i++){
+				if(Number(this.cart[i].quantity) < this.cart[i].customerQuantity){
+					this.toastr.error("We only have " + this.cart[i].quantity+" "+this.cart[i].name+ "s left, please change your quantity in cart", "Error!");
+					return;
+				}
 	}
+	
+	for(var j=0;j<this.cart.length;j++){
 
-	this.productService.EditProduct(request_body);
-}
+			this.productService.productID = this.cart[j].productId;
+
+			var quan = (this.cart[j].quantity - this.cart[j].customerQuantity);
+			var request_body = {
+
+			name:this.cart[j].name,
+			description:this.cart[j].description,
+			price:this.cart[j].price,
+			category:this.cart[j].category,
+			image: this.cart[j].image,
+			quantity:quan,
+			status:this.cart[j].status
+		}
+
+		this.productService.EditProduct(request_body);
+	}
 	
 	console.log("passed for both fors");
-
+	this.cart.unshift(this.customerinfo);
 
 	
 	var request_body = {
