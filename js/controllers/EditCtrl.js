@@ -18,6 +18,9 @@ function EditCtrl(productService,$state,toastr){
 	console.log("HI");
 	console.log(this.fakeProd);
 	console.log(this.request_body);
+	if(this.fakeProd==""){
+		this.$state.go('admin');
+	}
 };
 
 

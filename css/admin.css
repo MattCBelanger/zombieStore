@@ -3,9 +3,10 @@
 @media(min-width:992px){
 }
 @media(min-width:1200px){}
-
+.admin-page {
+	padding-top: 4em;
+}
 .admin-page .product-style {
-/*	padding: 10px;*/
 	height: 275px;	
 }
 .admin-page .product-style button { 
