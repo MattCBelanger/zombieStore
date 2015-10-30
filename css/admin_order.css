@@ -1,8 +1,9 @@
 .ordertitle {
 	text-align: center;
 }
-
-
 .info{
 	font-weight: bold;
+}
+.ordertitle hr {
+	color: #fff;
 }
