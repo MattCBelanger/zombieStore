@@ -11,13 +11,24 @@ function ShopCtrl(productService,$state,products,$uibModal,toastr){
 	console.log(this.products);
 	this.$uibModal = $uibModal;
 	this.cart = this.productService.cart;
-	
+	this.cat = "";
+
 	this.Weapons = "Weapons";
 	this.Tech = "Tech";
 	this.Food = "Food";
 	this.Health = "Health";
 	this.All = "";
 	this.toastr = toastr;
+
+	if(this.productService.homeClickSearch==this.Health){
+		this.cat = this.Health;
+	}else if(this.productService.homeClickSearch==this.Tech){
+		this.cat = this.Tech;
+	}else if(this.productService.homeClickSearch==this.Food){
+		this.cat = this.Food;
+	}else if(this.productService.homeClickSearch==this.Weapons){
+		this.cat = this.Weapons;
+	}
 
 	//navbar search
 	// this.searchBar = this.productService.searchBar;

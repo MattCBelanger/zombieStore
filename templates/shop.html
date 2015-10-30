@@ -41,19 +41,22 @@
 
                  | orderBy:Ctrl.selectedOption.sortField:Ctrl.selectedOption.reverse" ng-show="(product.status=='active')"
                  >
-
+                 <span class="text-content"><span>+ Click for more details</span></span>
+            <div class="bottom-aligned">
               <div ng-click="Ctrl.changeID(product)">
                 <img src="{{product.image}}" alt="{{product.description}}" class="img-responsive col-md-12 center-block">
-                <span class="text-content"><span>+ Click for more details</span></span>
+                
                 <h2><strong>{{product.name}}</strong></h2>
               
                 <p>${{product.price}}</p>
                  <p>Category: {{product.category}}</p>
   
               </div>
-              <div class="row bottom-aligned">
+              <div class="row">
                 <button ng-click="Ctrl.addToCart(product)" class="btn btn-info">Add to Cart</button>
               </div>
+
+          </div>
           </div>
         </div>
       </div>

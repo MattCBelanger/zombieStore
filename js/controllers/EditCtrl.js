@@ -39,7 +39,7 @@ EditCtrl.prototype.editProduct = function(name,description,price,img,category,qu
 	this.productService.EditProduct(request_body);
 	
 
-	this.toastr.success(request_body.name +' Product has been editted!', 'Success!');
+	this.toastr.success(request_body.name +' Product has been edited!', 'Success!');
 	
 	for (i=0;i<this.productService.products.length;i++){
 		

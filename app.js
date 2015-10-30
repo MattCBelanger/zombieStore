@@ -17,7 +17,8 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider, toastrCon
                   controller: 'NavCtrl as Ctrl'
         },
                 content: {
-                    templateUrl: 'templates/home.html'
+                    templateUrl: 'templates/home.html',
+                    controller: 'MainCtrl as Ctrl'
         },
 
                 foot: {
