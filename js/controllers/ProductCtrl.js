@@ -4,28 +4,31 @@ function ProductCtrl(productService,$state,toastr){
 	this.productService = productService;
 	this.product = this.productService.productView;
 	this.$state=$state;
+
 	this.toastr = toastr;
 	this.cart = this.productService.cart;
 	
-	
-}
-ProductCtrl.prototype.addProduct = function(name,description,price,img,category,quantity,status){
-	
-	var request_body = {
-		name:name,
-		description:description,
-		price:price,
-		category:category,
-		image:img,
-		quantity:quantity,
-		status:status
+	if(this.product==""){
+		this.$state.go('shop');
 	}
-
-	this.productService.addProduct(request_body);
-	this.toastr.success('Your '+ request_body.name +' has been added.', 'Success!');
-	this,$state.go('admin');
-	
 }
+// ProductCtrl.prototype.addProduct = function(name,description,price,img,category,quantity,status){
+	
+// 	var request_body = {
+// 		name:name,
+// 		description:description,
+// 		price:price,
+// 		category:category,
+// 		image:img,
+// 		quantity:quantity,
+// 		status:status
+// 	}
+
+// 	this.productService.addProduct(request_body);
+// 	this.toastr.success('Your '+ request_body.name +' has been added.', 'Success!');
+// 	this,$state.go('admin');
+	
+// }
 
 
 ProductCtrl.prototype.addToCart= function(product){

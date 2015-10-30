@@ -114,7 +114,7 @@ app.config(function($stateProvider, $httpProvider, $urlRouterProvider, toastrCon
                 },
                 content: {
                    templateUrl: 'templates/add_product.html',
-                    controller: 'ProductCtrl as Ctrl'
+                    controller: 'adminProductCtrl as Ctrl'
                     }
                 }
     })
