@@ -49,7 +49,8 @@ ShopCtrl.prototype.addToCart= function(product){
 	for(var i = 0; i<this.cart.length;i++){
 		if(shopItem.productId==this.cart[i].productId){
 			this.cart[i].customerQuantity++;
-			alert("product quantity increased!");
+			this.toastr.success('Your '+ shopItem.name +' quantity has been increase!', 'Success!');
+			// alert("product quantity increased!");
 			return
 		}
 	}
