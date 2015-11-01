@@ -8,9 +8,9 @@ angular.module('ShopApp').service('api', ApiService);
 
 //constants
 var BASE_URL = 'http://174.129.248.23/brainstation/shop';
-var HEADERS = {headers : {'Content-Type': 'application/x-www-form-urlencoded'}};
+var HEADERS = {headers : {'Content-Type': 'application/x-www-form-urlencoded','Authorization':'AFJVJA46AS'}};
 
-
+// 'Authorization':'AFJVJA46AS'
 ApiService.prototype.request = function(endpoint,data,method) {
 
   //build request
@@ -20,6 +20,7 @@ ApiService.prototype.request = function(endpoint,data,method) {
     return this.http.post(BASE_URL + endpoint,data,HEADERS)
   }
   else if(method == 'GET'){
+    console.log(HEADERS);
     return this.http.get(BASE_URL + endpoint,'',HEADERS);
   }
 
